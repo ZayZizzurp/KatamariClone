@@ -12,6 +12,9 @@ public class ballBehavior : MonoBehaviour {
 	public Rigidbody rbObject;
 	private float volume;
 	
+	public Bounds bounds;
+	public SphereCollider originalBallDiameter;
+	
 
 	private Rigidbody rb;
 
@@ -19,6 +22,7 @@ public class ballBehavior : MonoBehaviour {
 	{
 		volume = collector.transform.localScale.x * collector.transform.localScale.y * collector.transform.localScale.z;
 		rb = GetComponent<Rigidbody>();
+		bounds = originalBallDiameter.bounds;
 	}
 
 	
@@ -42,6 +46,7 @@ public class ballBehavior : MonoBehaviour {
          			rb.mass += col.rigidbody.mass;
          		    Destroy(col.rigidbody);
                      col.transform.parent = transform;
+			         bounds.Encapsulate(transform.localScale + col.transform.localScale);
          			
          		}
 		if (col.gameObject.tag == "collectable2")
@@ -49,6 +54,7 @@ public class ballBehavior : MonoBehaviour {
 			rb.mass += col.rigidbody.mass;
 			Destroy(col.rigidbody);
 			col.transform.parent = transform;
+			bounds.Encapsulate(transform.localScale +col.transform.localScale);
          			
 		}
 	}
