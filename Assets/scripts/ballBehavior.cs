@@ -5,52 +5,45 @@ using UnityEngine;
 
 public class ballBehavior : MonoBehaviour {
 
-	public GameObject collector;
-	public GameObject collector2;
-	public float speed;
-	public float turn;
-	public Rigidbody rbObject;
-	private float volume;
+	public float speed; //speed of ball
+	public float turn; //turn amount
+	private float massBall; 
+	private float collectMass = 2; //mass of collectables 
 	
 
 	private Rigidbody rb;
 
 	void Start ()
 	{
-		volume = collector.transform.localScale.x * collector.transform.localScale.y * collector.transform.localScale.z;
-		rb = GetComponent<Rigidbody>();
+		rb = GetComponent<Rigidbody>(); //getting rigidbody of ball
+		
 	}
 
 	
 
 	void FixedUpdate ()
 	{
-		
-		float moveHorizontal = Input.GetAxis ("Horizontal");
-		float moveVertical = Input.GetAxis ("Vertical");
+		Debug.Log(massBall); //printing out the mass that has been added to the ball
+		float moveHorizontal = Input.GetAxis ("Horizontal"); //moving left and right
+		float moveVertical = Input.GetAxis ("Vertical"); //moving up and down
 
 		Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
 
-		rb.AddForce (movement * speed);
-		rb.AddTorque(transform.up * turn * moveHorizontal);
+		rb.AddForce (movement * speed); //how the ball is able to roll
+		rb.AddTorque(transform.up * turn * moveHorizontal);// ball turn and roll
 	}
 
 	void OnCollisionEnter(Collision col)
 	{
-		if (col.gameObject.tag == "collectable")
+		if (col.gameObject.tag == "collectable") //if ball runs into an object
          		{
-         			rb.mass += col.rigidbody.mass;
-         		    Destroy(col.rigidbody);
-                     col.transform.parent = transform;
+         			rb.mass += col.rigidbody.mass; //mass of ball is now added to mass of collectable
+			         massBall += collectMass; //mass collected is added to variable
+         		    Destroy(col.rigidbody); //getting rid of the rigidbody on collectable
+                     col.transform.parent = transform; //parenting object to ball
          			
          		}
-		if (col.gameObject.tag == "collectable2")
-		{
-			rb.mass += col.rigidbody.mass;
-			Destroy(col.rigidbody);
-			col.transform.parent = transform;
-         			
-		}
+		
 	}
 	
 	
