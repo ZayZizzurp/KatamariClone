@@ -14,14 +14,15 @@ public class ballBehavior : MonoBehaviour
 	public float turn; //turn amount
 	private float massBall; //mass of the ball as it grows
 	private float collectMass = 2; //mass of collectables 
-	
+	public Bounds bounds;
+	public SphereCollider originalBallDiameter;
 
 	private Rigidbody rb;
 
 	void Start ()
 	{
 		rb = GetComponent<Rigidbody>(); //getting rigidbody of ball
-		
+		bounds = originalBallDiameter.bounds;
 	}
 
 	
@@ -65,6 +66,8 @@ public class ballBehavior : MonoBehaviour
 			         massBall += collectMass; //mass collected is added to variable
          		    Destroy(col.rigidbody); //getting rid of the rigidbody on collectable
                      col.transform.parent = transform; //parenting object to ball
+			         
+			         bounds.Encapsulate(transform.localScale + col.transform.localScale);
          			
          		}
 		
