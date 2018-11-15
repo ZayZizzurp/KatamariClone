@@ -7,12 +7,12 @@ using UnityEngine;
 public class ballBehavior : MonoBehaviour
 {
 
-	public float maxSpeed = 150;
-	public float minSpeed = 0;
+	public float maxSpeed = 150; //max speed ball can reach
+	public float minSpeed = 0; //min speed it can go to
 	public float speed = 0; //speed of ball
-	public float acceleration = 2;
+	public float acceleration = 2; //acceleration of the ball as you go forward
 	public float turn; //turn amount
-	private float massBall; 
+	private float massBall; //mass of the ball as it grows
 	private float collectMass = 2; //mass of collectables 
 	
 
