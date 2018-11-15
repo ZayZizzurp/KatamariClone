@@ -536,6 +536,11 @@ Prefab:
       propertyPath: minSpeed
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 23716956862373390, guid: 403fffe596206492a9f3d768ca5a5b27,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 560360d9650d74283a9d8aacd3fcb216, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 403fffe596206492a9f3d768ca5a5b27, type: 2}
   m_IsPrefabAsset: 0
