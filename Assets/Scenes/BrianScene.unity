@@ -210,11 +210,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d91f7777a124b9ba8ba5abae9e17b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collector: {fileID: 2002404605}
-  collector2: {fileID: 0}
   speed: 5
   turn: 1
-  rbObject: {fileID: 2002404606}
 --- !u!135 &315675696
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -396,7 +393,7 @@ GameObject:
   m_Component:
   - component: {fileID: 643859771}
   m_Layer: 0
-  m_Name: IdlePositionOne
+  m_Name: MouseIdlePositionOne
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
