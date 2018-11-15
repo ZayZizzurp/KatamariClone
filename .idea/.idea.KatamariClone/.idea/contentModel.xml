@@ -10,6 +10,7 @@
           <e p="CameraAdjust.cs" t="Include" />
           <e p="CameraCollision.cs" t="Include" />
           <e p="collactable.cs" t="Include" />
+          <e p="EnemyMouse.cs" t="Include" />
           <e p="PlayerCamera.cs" t="Include" />
         </e>
         <e p="UI.cs" t="Include" />
