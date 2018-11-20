@@ -7,6 +7,10 @@ using UnityEngine.UI;
 public class UI : MonoBehaviour
 {
 
+	public ballBehavior player;
+	
+	public Text meterDisplay;
+	
 	public Image ballSize;
 	public SphereCollider katCollider;
 	public GameObject katamariBall;
@@ -25,10 +29,13 @@ public class UI : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		katRadius = katCollider.radius;
+		clockHand.transform.Rotate(0f,0f, -Time.deltaTime * 2.75f);
+
 		
-		clockHand.transform.Rotate(0f,0f, -Time.deltaTime); 
+		float radius = (player.bounds.max.x + player.bounds.max.y + player.bounds.max.z) / 3;
 		
-		ballSize.rectTransform.localScale = new Vector3(katamariBall.transform.localScale.x/4,katamariBall.transform.localScale.y/4,katamariBall.transform.localScale.z);
+		ballSize.rectTransform.localScale = new Vector3(radius/2,radius/2,1);
+
+		meterDisplay.text = "radius: " +  (radius*2).ToString();
 	}
 }
