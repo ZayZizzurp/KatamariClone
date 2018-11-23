@@ -42,7 +42,16 @@ public class ballBehavior : MonoBehaviour
 		{
 			speed = speed - acceleration;
 		}
-		
+
+		if (Input.GetKey(KeyCode.Space)) //speed up when pressing space
+		{
+			maxSpeed = 300;
+			speed += 50;
+		}
+		else
+		{
+			maxSpeed = 240;
+		}
 		
 		Debug.Log(speed);
 		rb.AddForce (movement * speed); //how the ball is able to roll
