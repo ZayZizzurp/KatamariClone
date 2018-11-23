@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Timers;
 using UnityEditor;
 using UnityEngine;
 
@@ -16,6 +17,7 @@ public class ballBehavior : MonoBehaviour
 	private float collectMass = 2; //mass of collectables 
 	public Bounds bounds;
 	public SphereCollider originalBallDiameter;
+	//public float ballTimer = 0f;
 
 	private Rigidbody rb;
 
@@ -29,6 +31,8 @@ public class ballBehavior : MonoBehaviour
 
 	void FixedUpdate ()
 	{
+		//ballTimer += Time.deltaTime;
+		
 		Debug.Log(massBall); //printing out the mass that has been added to the ball
 		float moveHorizontal = Input.GetAxis ("Horizontal"); //moving left and right
 		float moveVertical = Input.GetAxis ("Vertical"); //moving up and down
@@ -45,7 +49,7 @@ public class ballBehavior : MonoBehaviour
 
 		if (Input.GetKey(KeyCode.Space)) //speed up when pressing space
 		{
-			maxSpeed = 300;
+			maxSpeed = 350;
 			speed += 50;
 		}
 		else
