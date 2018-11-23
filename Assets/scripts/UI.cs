@@ -10,6 +10,7 @@ public class UI : MonoBehaviour
 	public ballBehavior player;
 	
 	public Text meterDisplay;
+	public Text mmText;
 	
 	public Image ballSize;
 	public SphereCollider katCollider;
@@ -35,7 +36,9 @@ public class UI : MonoBehaviour
 		float radius = (player.bounds.max.x + player.bounds.max.y + player.bounds.max.z) / 3;
 		
 		ballSize.rectTransform.localScale = new Vector3(radius/2,radius/2,1);
+		
 
-		meterDisplay.text = "radius: " +  (radius*2).ToString();
+		meterDisplay.text = "cm: " +  ((int)radius *2).ToString("F0");
+		mmText.text = "mm: " + (radius - (int) radius).ToString("F0");
 	}
 }
