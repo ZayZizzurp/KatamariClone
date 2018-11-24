@@ -32,13 +32,18 @@ public class UI : MonoBehaviour
 	{
 		clockHand.transform.Rotate(0f,0f, -Time.deltaTime * 2.75f);
 
-		
-		float radius = (player.bounds.max.x + player.bounds.max.y + player.bounds.max.z) / 3;
-		
-		ballSize.rectTransform.localScale = new Vector3(radius/2,radius/2,1);
-		
+		/*if (clockHand.transform.rotation.z <= -270 && clockHand.transform.rotation.z >= -290)
+		{
+			clockHand.transform.localRotation.z = (0,0,0);
+		}*/
 
+
+		float radius = (player.bounds.max.x + player.bounds.max.y + player.bounds.max.z) / 6;
+		
+		ballSize.rectTransform.localScale = new Vector3(radius/10,radius/10,1);
+		
+		Debug.Log("Radius = " + radius);
 		meterDisplay.text = "cm: " +  ((int)radius *2).ToString("F0");
-		mmText.text = "mm: " + (radius - (int) radius).ToString("F0");
+		mmText.text = "mm: " +( (radius - (int) radius) * 10).ToString("F0");
 	}
 }

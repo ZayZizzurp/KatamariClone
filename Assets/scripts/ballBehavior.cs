@@ -44,7 +44,7 @@ public class ballBehavior : MonoBehaviour
 		}
 		
 		
-		Debug.Log(speed);
+		//Debug.Log(speed);
 		rb.AddForce (movement * speed); //how the ball is able to roll
 		rb.AddTorque(transform.up * turn * moveHorizontal);// ball turn and roll
 		if (speed >= maxSpeed)
