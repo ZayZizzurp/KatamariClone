@@ -26,10 +26,11 @@ public class EnemyMouse : MonoBehaviour
 		{
 			transform.position = Vector3.MoveTowards(transform.position, idlePosition.position, Time.deltaTime);
 		}
-	}
 
-	private void OnCollisionEnter(Collision Player)
-	{
+		
+		
 		
 	}
+
+	
 }
