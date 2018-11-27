@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="316cca9a-fcf3-4a83-8566-3ab800fc6f35" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/ballBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/ballBehavior.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MaddyScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MaddyScene.unity" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,7 +14,7 @@
     <session id="314637561">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
+          <entry key="project.closed" value="6" />
           <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.9" value="3" />
@@ -41,7 +41,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/scripts/ballBehavior.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-216">
+            <state relative-caret-position="675">
               <caret line="50" column="26" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
               <folding>
                 <marker date="1543329227378" expanded="false" signature="6:132" ph="..." />
@@ -158,12 +158,12 @@
       <workItem from="1542298705263" duration="582000" />
       <workItem from="1542299743415" duration="594000" />
       <workItem from="1542944545363" duration="801000" />
-      <workItem from="1543328302251" duration="818000" />
+      <workItem from="1543328302251" duration="1403000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5587000" />
+    <option name="totallyTimeSpent" value="6172000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -224,7 +224,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Assets/scripts/ballBehavior.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-216">
+        <state relative-caret-position="675">
           <caret line="50" column="26" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
           <folding>
             <marker date="1543329227378" expanded="false" signature="6:132" ph="..." />

@@ -113,6 +113,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!135 &51236086 stripped
+SphereCollider:
+  m_CorrespondingSourceObject: {fileID: 135157287890514656, guid: 403fffe596206492a9f3d768ca5a5b27,
+    type: 2}
+  m_PrefabInternal: {fileID: 934353921}
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
@@ -541,6 +546,11 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 560360d9650d74283a9d8aacd3fcb216, type: 2}
+    - target: {fileID: 114678333628171194, guid: 403fffe596206492a9f3d768ca5a5b27,
+        type: 2}
+      propertyPath: originalBallDiameter
+      value: 
+      objectReference: {fileID: 51236086}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 403fffe596206492a9f3d768ca5a5b27, type: 2}
   m_IsPrefabAsset: 0
