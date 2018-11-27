@@ -257,6 +257,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1dea97af7501e464482ea1abf3da8175, type: 3}
+      propertyPath: m_TagString
+      value: collectable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1dea97af7501e464482ea1abf3da8175, type: 3}
   m_IsPrefabAsset: 0
@@ -315,6 +319,10 @@ Prefab:
     - target: {fileID: 400000, guid: 37bdf8a0210a6b9498045d72e735cb1b, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.015
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 37bdf8a0210a6b9498045d72e735cb1b, type: 3}
+      propertyPath: m_TagString
+      value: collectable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37bdf8a0210a6b9498045d72e735cb1b, type: 3}
@@ -589,6 +597,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.05
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1dea97af7501e464482ea1abf3da8175, type: 3}
+      propertyPath: m_TagString
+      value: collectable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1dea97af7501e464482ea1abf3da8175, type: 3}
   m_IsPrefabAsset: 0
@@ -822,6 +834,10 @@ Prefab:
       propertyPath: m_Name
       value: Caramel (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1dea97af7501e464482ea1abf3da8175, type: 3}
+      propertyPath: m_TagString
+      value: collectable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1dea97af7501e464482ea1abf3da8175, type: 3}
   m_IsPrefabAsset: 0
@@ -884,6 +900,10 @@ Prefab:
     - target: {fileID: 100000, guid: 8e051fe0b1692624386176b772665b21, type: 3}
       propertyPath: m_Name
       value: dice (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8e051fe0b1692624386176b772665b21, type: 3}
+      propertyPath: m_TagString
+      value: collectable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e051fe0b1692624386176b772665b21, type: 3}
@@ -1197,6 +1217,9 @@ Transform:
   - {fileID: 1777863099}
   - {fileID: 316315049}
   - {fileID: 1598174375}
+  - {fileID: 1398802229}
+  - {fileID: 1747443535}
+  - {fileID: 1728149893}
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1518,6 +1541,10 @@ Prefab:
       propertyPath: m_Name
       value: Push Pin (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 18cb303a26b71964f94c73615403faa0, type: 3}
+      propertyPath: m_TagString
+      value: collectable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18cb303a26b71964f94c73615403faa0, type: 3}
   m_IsPrefabAsset: 0
@@ -1673,6 +1700,10 @@ Prefab:
     - target: {fileID: 100010, guid: 18cb303a26b71964f94c73615403faa0, type: 3}
       propertyPath: m_Name
       value: Push Pin (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 18cb303a26b71964f94c73615403faa0, type: 3}
+      propertyPath: m_TagString
+      value: collectable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18cb303a26b71964f94c73615403faa0, type: 3}
@@ -2117,6 +2148,10 @@ Prefab:
       propertyPath: m_Name
       value: Push Pin (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 18cb303a26b71964f94c73615403faa0, type: 3}
+      propertyPath: m_TagString
+      value: collectable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18cb303a26b71964f94c73615403faa0, type: 3}
   m_IsPrefabAsset: 0
@@ -2382,6 +2417,10 @@ Prefab:
     - target: {fileID: 400000, guid: 8e051fe0b1692624386176b772665b21, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8e051fe0b1692624386176b772665b21, type: 3}
+      propertyPath: m_TagString
+      value: collectable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e051fe0b1692624386176b772665b21, type: 3}
@@ -2652,6 +2691,10 @@ Prefab:
     - target: {fileID: 400010, guid: 18cb303a26b71964f94c73615403faa0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 18cb303a26b71964f94c73615403faa0, type: 3}
+      propertyPath: m_TagString
+      value: collectable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18cb303a26b71964f94c73615403faa0, type: 3}
@@ -3064,6 +3107,10 @@ Prefab:
       propertyPath: m_Name
       value: Push Pin (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 18cb303a26b71964f94c73615403faa0, type: 3}
+      propertyPath: m_TagString
+      value: collectable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18cb303a26b71964f94c73615403faa0, type: 3}
   m_IsPrefabAsset: 0
@@ -3208,6 +3255,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.02
       objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 256914177c120a64d8eb02af58856664, type: 3}
+      propertyPath: m_TagString
+      value: collectable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 256914177c120a64d8eb02af58856664, type: 3}
   m_IsPrefabAsset: 0
@@ -3275,6 +3326,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1dea97af7501e464482ea1abf3da8175, type: 3}
+      propertyPath: m_TagString
+      value: collectable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1dea97af7501e464482ea1abf3da8175, type: 3}
   m_IsPrefabAsset: 0
@@ -3341,6 +3396,10 @@ Prefab:
     - target: {fileID: 400000, guid: 1dea97af7501e464482ea1abf3da8175, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1dea97af7501e464482ea1abf3da8175, type: 3}
+      propertyPath: m_TagString
+      value: collectable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1dea97af7501e464482ea1abf3da8175, type: 3}
@@ -3946,6 +4005,10 @@ Prefab:
     - target: {fileID: 100000, guid: 8e051fe0b1692624386176b772665b21, type: 3}
       propertyPath: m_Name
       value: dice (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8e051fe0b1692624386176b772665b21, type: 3}
+      propertyPath: m_TagString
+      value: collectable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e051fe0b1692624386176b772665b21, type: 3}
@@ -4809,6 +4872,10 @@ Prefab:
       propertyPath: m_Name
       value: Caramel (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1dea97af7501e464482ea1abf3da8175, type: 3}
+      propertyPath: m_TagString
+      value: collectable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1dea97af7501e464482ea1abf3da8175, type: 3}
   m_IsPrefabAsset: 0
@@ -5387,7 +5454,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 429802741}
     m_Modifications:
     - target: {fileID: 400004, guid: 18042bef56ed3194999c0b68489051b8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5403,15 +5470,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 18042bef56ed3194999c0b68489051b8, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 18042bef56ed3194999c0b68489051b8, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 18042bef56ed3194999c0b68489051b8, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 18042bef56ed3194999c0b68489051b8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5419,7 +5486,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 18042bef56ed3194999c0b68489051b8, type: 3}
       propertyPath: m_RootOrder
-      value: 21
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 18042bef56ed3194999c0b68489051b8, type: 3}
       propertyPath: m_LocalScale.x
@@ -5437,9 +5504,18 @@ Prefab:
       propertyPath: m_Name
       value: Thumbtack (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 18042bef56ed3194999c0b68489051b8, type: 3}
+      propertyPath: m_TagString
+      value: collectable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18042bef56ed3194999c0b68489051b8, type: 3}
   m_IsPrefabAsset: 0
+--- !u!4 &1398802229 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400004, guid: 18042bef56ed3194999c0b68489051b8,
+    type: 3}
+  m_PrefabInternal: {fileID: 1398802228}
 --- !u!1001 &1423295996
 Prefab:
   m_ObjectHideFlags: 0
@@ -5494,6 +5570,10 @@ Prefab:
     - target: {fileID: 100006, guid: 256914177c120a64d8eb02af58856664, type: 3}
       propertyPath: m_Name
       value: PhillipsHeadScrew (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 256914177c120a64d8eb02af58856664, type: 3}
+      propertyPath: m_TagString
+      value: collectable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 256914177c120a64d8eb02af58856664, type: 3}
@@ -5813,6 +5893,10 @@ Prefab:
       propertyPath: m_Name
       value: PhillipsHeadScrew (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 256914177c120a64d8eb02af58856664, type: 3}
+      propertyPath: m_TagString
+      value: collectable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 256914177c120a64d8eb02af58856664, type: 3}
   m_IsPrefabAsset: 0
@@ -5929,6 +6013,10 @@ Prefab:
     - target: {fileID: 100000, guid: 8e051fe0b1692624386176b772665b21, type: 3}
       propertyPath: m_Name
       value: dice (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8e051fe0b1692624386176b772665b21, type: 3}
+      propertyPath: m_TagString
+      value: collectable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e051fe0b1692624386176b772665b21, type: 3}
@@ -6227,6 +6315,120 @@ Transform:
   m_Father: {fileID: 667267104}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45}
+--- !u!1 &1728149892
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1728149893}
+  - component: {fileID: 1728149898}
+  - component: {fileID: 1728149897}
+  - component: {fileID: 1728149896}
+  - component: {fileID: 1728149895}
+  - component: {fileID: 1728149894}
+  m_Layer: 0
+  m_Name: Capsule
+  m_TagString: collectable
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1728149893
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1728149892}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 2.838}
+  m_LocalScale: {x: 0.25495, y: 0.25495, z: 0.25495}
+  m_Children: []
+  m_Father: {fileID: 429802741}
+  m_RootOrder: 26
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1728149894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1728149892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8cdf42b804a54f67b57b7c367bf7537, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &1728149895
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1728149892}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!136 &1728149896
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1728149892}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1728149897
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1728149892}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 2100000, guid: 7760f3bb98228499dadd52c2c56e19a9, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1728149898
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1728149892}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1728792066
 GameObject:
   m_ObjectHideFlags: 0
@@ -6309,7 +6511,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 429802741}
     m_Modifications:
     - target: {fileID: 400004, guid: 18042bef56ed3194999c0b68489051b8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6325,15 +6527,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 18042bef56ed3194999c0b68489051b8, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 18042bef56ed3194999c0b68489051b8, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 18042bef56ed3194999c0b68489051b8, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 18042bef56ed3194999c0b68489051b8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6341,7 +6543,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 18042bef56ed3194999c0b68489051b8, type: 3}
       propertyPath: m_RootOrder
-      value: 22
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 18042bef56ed3194999c0b68489051b8, type: 3}
       propertyPath: m_LocalScale.x
@@ -6359,9 +6561,18 @@ Prefab:
       propertyPath: m_Name
       value: Thumbtack (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 18042bef56ed3194999c0b68489051b8, type: 3}
+      propertyPath: m_TagString
+      value: collectable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18042bef56ed3194999c0b68489051b8, type: 3}
   m_IsPrefabAsset: 0
+--- !u!4 &1747443535 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400004, guid: 18042bef56ed3194999c0b68489051b8,
+    type: 3}
+  m_PrefabInternal: {fileID: 1747443534}
 --- !u!1 &1775131024
 GameObject:
   m_ObjectHideFlags: 0
@@ -6502,6 +6713,10 @@ Prefab:
       propertyPath: m_Name
       value: dice (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8e051fe0b1692624386176b772665b21, type: 3}
+      propertyPath: m_TagString
+      value: collectable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e051fe0b1692624386176b772665b21, type: 3}
   m_IsPrefabAsset: 0
@@ -6603,6 +6818,10 @@ Prefab:
     - target: {fileID: 100010, guid: 18cb303a26b71964f94c73615403faa0, type: 3}
       propertyPath: m_Name
       value: Push Pin (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 18cb303a26b71964f94c73615403faa0, type: 3}
+      propertyPath: m_TagString
+      value: collectable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18cb303a26b71964f94c73615403faa0, type: 3}
@@ -6922,6 +7141,10 @@ Prefab:
       propertyPath: m_Name
       value: dice (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8e051fe0b1692624386176b772665b21, type: 3}
+      propertyPath: m_TagString
+      value: collectable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e051fe0b1692624386176b772665b21, type: 3}
   m_IsPrefabAsset: 0
@@ -7239,6 +7462,10 @@ Prefab:
     - target: {fileID: 100006, guid: 256914177c120a64d8eb02af58856664, type: 3}
       propertyPath: m_Name
       value: PhillipsHeadScrew (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 256914177c120a64d8eb02af58856664, type: 3}
+      propertyPath: m_TagString
+      value: collectable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 256914177c120a64d8eb02af58856664, type: 3}
@@ -7656,6 +7883,10 @@ Prefab:
     - target: {fileID: 100006, guid: 256914177c120a64d8eb02af58856664, type: 3}
       propertyPath: m_Name
       value: PhillipsHeadScrew (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 256914177c120a64d8eb02af58856664, type: 3}
+      propertyPath: m_TagString
+      value: collectable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 256914177c120a64d8eb02af58856664, type: 3}
