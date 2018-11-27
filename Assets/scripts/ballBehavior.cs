@@ -48,7 +48,7 @@ public class ballBehavior : MonoBehaviour
 			speed = speed - acceleration;
 		}
 
-		if (ballTimer > 10 && Input.GetKey(KeyCode.Space)) //speed up when pressing space
+		if (ballTimer > 15 && Input.GetKey(KeyCode.Space)) //speed up when pressing space
 		{
 			fastTimer += Time.deltaTime;
 			maxSpeed = 350;
