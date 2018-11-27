@@ -73,7 +73,7 @@ public class CameraTest : MonoBehaviour {
         }
         #endregion
  
-        rotateAround += HorizontalAxis * camRotateSpeed * Time.deltaTime;
+        //rotateAround += HorizontalAxis * camRotateSpeed * Time.deltaTime;
         //DistanceUp = Mathf.Clamp(DistanceUp += VerticalAxis, -0.79f, 2.3f);
         DistanceAway = Mathf.Clamp(DistanceAway += VerticalAxis, minDistance, maxDistance);
  
