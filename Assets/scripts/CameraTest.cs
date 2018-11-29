@@ -7,10 +7,10 @@ public class CameraTest : MonoBehaviour {
    [Header("Camera Properties")]
     private float DistanceAway;                     //how far the camera is from the player.
  
-    public float minDistance = 1;                //min camera distance
+    public float minDistance = -1;                //min camera distance
     public float maxDistance = 2;                //max camera distance
  
-    public float DistanceUp = -2;                    //how high the camera is above the player
+    public float DistanceUp = -1;                    //how high the camera is above the player
     public float smooth = 4.0f;                    //how smooth the camera moves into place
     public float rotateAround = 70f;            //the angle at which you will rotate the camera (on an axis)
  
