@@ -10,6 +10,7 @@
           <e p="ballBehavior.cs" t="Include" />
           <e p="CameraAdjust.cs" t="Include" />
           <e p="CameraCollision.cs" t="Include" />
+          <e p="CameraTest.cs" t="Include" />
           <e p="collactable.cs" t="Include" />
           <e p="EnemyMouse.cs" t="Include" />
           <e p="LastObjectDisplay.cs" t="Include" />
