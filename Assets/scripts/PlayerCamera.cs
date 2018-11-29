@@ -12,6 +12,10 @@ public class PlayerCamera : MonoBehaviour {
 
     public float ballSize;
     
+    private float HorizontalAxis;
+    private float rotateSpeed = 0.3f;
+    float camRotateSpeed = 180f;
+    public float rotateAround = 70f;  
    
 
     // Use this for initialization
@@ -38,5 +42,12 @@ public class PlayerCamera : MonoBehaviour {
         transform.LookAt(playerPos);
         
         
+    }
+
+    void Update()
+    {
+        HorizontalAxis = Input.GetAxis ("Rotate");
+        
+        rotateAround += HorizontalAxis * camRotateSpeed * Time.deltaTime;
     }
 }

@@ -23,7 +23,7 @@ public class CameraTest : MonoBehaviour {
     [Header("Map coordinate script")]
 //    public worldVectorMap wvm;
     RaycastHit hit;
-    float cameraHeight = 55f;
+    float cameraHeight = 0.02f;
     float cameraPan = 0f;
     float camRotateSpeed = 180f;
     Vector3 camPosition;
@@ -74,7 +74,7 @@ public class CameraTest : MonoBehaviour {
         #endregion
  
         rotateAround += HorizontalAxis * camRotateSpeed * Time.deltaTime;
-        DistanceUp = Mathf.Clamp(DistanceUp += VerticalAxis, -0.79f, 2.3f);
+        DistanceUp = Mathf.Clamp(DistanceUp += VerticalAxis, -0.079f, 0.5f);
         DistanceAway = Mathf.Clamp(DistanceAway += VerticalAxis, minDistance, maxDistance);
  
     }
