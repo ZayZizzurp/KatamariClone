@@ -6,7 +6,7 @@ using UnityEngine;
 public class collactable : MonoBehaviour
 {
 
-	public float massObject = 0;
+	public float massObject = 3;
 	// Use this for initialization
 	void Start () {
 		
