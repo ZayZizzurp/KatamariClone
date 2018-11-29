@@ -3,10 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class collactable : MonoBehaviour {
-	Collider m_Collider;
+public class collactable : MonoBehaviour
+{
 
-	private Boolean collides;
+	public float massObject = 0;
 	// Use this for initialization
 	void Start () {
 		

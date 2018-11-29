@@ -19,11 +19,12 @@ public class ballBehavior : MonoBehaviour
 	public SphereCollider originalBallDiameter;
 	public float ballTimer = 0f;
 	public float fastTimer = 0f;
-
+	private collactable collectableScript;
 	private Rigidbody rb;
 
 	void Start ()
 	{
+		collectableScript = GetComponent<collactable>();
 		rb = GetComponent<Rigidbody>(); //getting rigidbody of ball
 		bounds = originalBallDiameter.bounds;
 	}
@@ -84,7 +85,8 @@ public class ballBehavior : MonoBehaviour
 	void OnCollisionEnter(Collision col)
 	{
 		if (col.gameObject.tag == "collectable") //if ball runs into an object
-         		{
+		{
+			
          			rb.mass += col.rigidbody.mass; //mass of ball is now added to mass of collectable
 			         massBall += collectMass; //mass collected is added to variable
          		    Destroy(col.rigidbody); //getting rid of the rigidbody on collectable
