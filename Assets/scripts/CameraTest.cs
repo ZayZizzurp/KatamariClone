@@ -45,15 +45,15 @@ public class CameraTest : MonoBehaviour {
  
     void LateUpdate(){
  
-        HorizontalAxis = Input.GetAxis ("Horizontal"); //camera rotate
-        VerticalAxis = Input.GetAxis ("Vertical"); //camera zoom out/in
+        HorizontalAxis = Input.GetAxis ("Rotate"); //camera rotate
+        VerticalAxis = Input.GetAxis ("Zoom"); //camera zoom out/in
        // VerticalAxis = Input.GetAxis("Vertical");
  
         //Offset of the targets transform (Since the pivot point is usually at the feet).
         Vector3 targetOffset = new Vector3(target.position.x, (target.position.y + 2f), target.position.z);
         Quaternion rotation = Quaternion.Euler(cameraHeight, rotateAround, cameraPan);
         Vector3 vectorMask = Vector3.one;
-        Vector3 rotateVector = rotation * vectorMask;
+        Vector3 rotateVector = rotation * vectorMask;    
         //this determines where both the camera and it's mask will be.
         //the camMask is for forcing the camera to push away from walls.
         camPosition = targetOffset + Vector3.up * DistanceUp - rotateVector * DistanceAway;
@@ -73,8 +73,8 @@ public class CameraTest : MonoBehaviour {
         }
         #endregion
  
-        //rotateAround += HorizontalAxis * camRotateSpeed * Time.deltaTime;
-        //DistanceUp = Mathf.Clamp(DistanceUp += VerticalAxis, -0.79f, 2.3f);
+        rotateAround += HorizontalAxis * camRotateSpeed * Time.deltaTime;
+        DistanceUp = Mathf.Clamp(DistanceUp += VerticalAxis, -0.79f, 2.3f);
         DistanceAway = Mathf.Clamp(DistanceAway += VerticalAxis, minDistance, maxDistance);
  
     }
