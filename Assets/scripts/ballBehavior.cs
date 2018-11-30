@@ -143,29 +143,40 @@ public class ballBehavior : MonoBehaviour
 	
 	void OnCollisionEnter(Collision col)
 	{
-		if (col.gameObject.tag != "collectable")
-			return;
-		bool hitMainCollider = false;
-		foreach (ContactPoint contact in col.contacts)
-		{
-			if (contact.thisCollider == GetComponent<SphereCollider>())
-			{
-				hitMainCollider = true;
-				break;
-			}
-		}
-
-		if (hitMainCollider)
-		{
-			if (col.rigidbody.mass < rb.mass || col.rigidbody.isKinematic)
+		if (col.gameObject.tag == "collectable")
+			if (massBall < 35 && col.rigidbody.mass < 3 && col.rigidbody.mass < rb.mass)
 			{
 				rb.mass += col.rigidbody.mass;
+				massBall += col.rigidbody.mass;
 				Destroy(col.rigidbody);
 				col.transform.parent = transform;
 				col.gameObject.GetComponent<BoxCollider>().enabled = false;
-				//col.gameObject.GetComponent<CapsuleCollider>().enabled = false;
-				//col.gameObject.GetComponent<SphereCollider>().enabled = true;
 			}
+		
+		if (massBall > 34 && col.rigidbody.mass < 7 && col.rigidbody.mass < rb.mass)
+		{
+			rb.mass += col.rigidbody.mass;
+			massBall += col.rigidbody.mass;
+			Destroy(col.rigidbody);
+			col.transform.parent = transform;
+			col.gameObject.GetComponent<BoxCollider>().enabled = false;
+		}
+		if (massBall > 60 && col.rigidbody.mass < 15 && col.rigidbody.mass < rb.mass)
+		{
+			rb.mass += col.rigidbody.mass;
+			massBall += col.rigidbody.mass;
+			Destroy(col.rigidbody);
+			col.transform.parent = transform;
+			col.gameObject.GetComponent<BoxCollider>().enabled = false;
+		}
+		
+		if (massBall > 100 && col.rigidbody.mass < 35 && col.rigidbody.mass < rb.mass)
+		{
+			rb.mass += col.rigidbody.mass;
+			massBall += col.rigidbody.mass;
+			Destroy(col.rigidbody);
+			col.transform.parent = transform;
+			col.gameObject.GetComponent<BoxCollider>().enabled = false;
 		}
 	}
 	
