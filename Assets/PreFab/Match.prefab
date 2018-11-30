@@ -55,9 +55,10 @@ GameObject:
   - component: {fileID: 4157575705645166}
   - component: {fileID: 54467407332896476}
   - component: {fileID: 65164324188515154}
+  - component: {fileID: 135347821379281488}
   m_Layer: 0
   m_Name: Match
-  m_TagString: Untagged
+  m_TagString: collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -214,3 +215,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.68412477, y: 6.840276, z: 0.6763851}
   m_Center: {x: 0.0033774204, y: 3.3439994, z: 0.0013920144}
+--- !u!135 &135347821379281488
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1825683497906658}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
