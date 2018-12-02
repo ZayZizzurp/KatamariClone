@@ -316,6 +316,7 @@ MonoBehaviour:
   clockHand: {fileID: 1359009379}
   firstTimer: 120
   timeLeft: 18
+  secondTimer: 0
   orangeTimer: 0
   handSpeed: 0
 --- !u!1 &394176819
@@ -569,7 +570,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 151.8, y: 77.9}
+  m_AnchoredPosition: {x: 198.4, y: 77.9}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &563327280
@@ -872,6 +873,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8cdf42b804a54f67b57b7c367bf7537, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  massObject: 3
 --- !u!54 &803545601
 Rigidbody:
   m_ObjectHideFlags: 0
