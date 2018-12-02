@@ -1,35 +1,32 @@
 fileFormatVersion: 2
-guid: b8f9ce06166acb444b01285fc1716fef
+guid: dca5a9bedb4cb5c4ea6e73b3a4e044ba
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: pCylinder1
-    100002: pSphere1
-    100004: ScrewBase
-    100006: Screwhead
-    100008: ScrewTip
-    100010: //RootNode
-    100012: transform1
-    100014: transform2
-    400000: pCylinder1
-    400002: pSphere1
-    400004: ScrewBase
-    400006: Screwhead
-    400008: ScrewTip
-    400010: //RootNode
-    400012: transform1
-    400014: transform2
+    100000: //RootNode
+    100002: group
+    100004: group1
+    100006: pasted__group
+    100008: pasted__pasted__pCylinder2
+    100010: pasted__pCylinder2
+    100012: pSphere1
+    400000: //RootNode
+    400002: group
+    400004: group1
+    400006: pasted__group
+    400008: pasted__pasted__pCylinder2
+    400010: pasted__pCylinder2
+    400012: pSphere1
     2100000: lambert1
-    2300000: ScrewBase
-    2300002: Screwhead
-    2300004: ScrewTip
-    3300000: ScrewBase
-    3300002: Screwhead
-    3300004: ScrewTip
-    4300000: Screwhead
-    4300002: ScrewBase
-    4300004: ScrewTip
-    2186277476908879412: ImportLogs
+    2300000: pasted__pasted__pCylinder2
+    2300002: pasted__pCylinder2
+    2300004: pSphere1
+    3300000: pasted__pasted__pCylinder2
+    3300002: pasted__pCylinder2
+    3300004: pSphere1
+    4300000: pSphere1
+    4300002: pasted__pCylinder2
+    4300004: pasted__pasted__pCylinder2
   externalObjects: {}
   materials:
     importMaterials: 1
