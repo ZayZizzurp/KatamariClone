@@ -619,7 +619,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minDistance: 3
-  maxDistance: 6
+  maxDistance: 9
   DistanceUp: -0
   smooth: 4
   rotateAround: 70

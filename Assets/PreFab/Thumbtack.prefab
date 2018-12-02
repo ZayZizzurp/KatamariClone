@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4913716004562976}
   - component: {fileID: 65815481698497894}
   - component: {fileID: 54592539106571546}
+  - component: {fileID: 135316138475356586}
   m_Layer: 0
   m_Name: Thumbtack
   m_TagString: Untagged
@@ -214,3 +215,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.1784004, y: 0.25703758, z: 1}
   m_Center: {x: -0.022106128, y: 1.3018893, z: 0}
+--- !u!135 &135316138475356586
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1535570449928134}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}

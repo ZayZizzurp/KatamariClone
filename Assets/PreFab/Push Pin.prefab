@@ -37,7 +37,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4145366510724654}
   - component: {fileID: 54862158699814748}
-  - component: {fileID: 136516416625247954}
+  - component: {fileID: 135988560736555652}
+  - component: {fileID: 65917124975544118}
   m_Layer: 0
   m_Name: Push Pin
   m_TagString: collectable
@@ -421,8 +422,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &136516416625247954
-CapsuleCollider:
+--- !u!65 &65917124975544118
+BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -430,7 +431,18 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.113563016
-  m_Height: 0.4226899
-  m_Direction: 1
-  m_Center: {x: -0.0028211623, y: 0.3541261, z: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!135 &135988560736555652
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1349562421976526}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
