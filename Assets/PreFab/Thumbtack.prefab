@@ -38,9 +38,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4886627650327946}
   - component: {fileID: 54170398023424692}
+  - component: {fileID: 65058670274757944}
   m_Layer: 0
   m_Name: Thumbtack
-  m_TagString: Untagged
+  m_TagString: collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,9 +96,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1122021869351026}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.7395, y: 1.2185079, z: -0.6655}
+  m_LocalScale: {x: 1.0230807, y: 1.0230807, z: 1.0230807}
   m_Children:
   - {fileID: 4799433822229452}
   - {fileID: 4329008568659166}
@@ -211,12 +212,24 @@ MeshCollider:
   m_GameObject: {fileID: 1109750828880408}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300002, guid: 59aa16b055c8f5e428a882092e5246e8, type: 3}
+--- !u!65 &65058670274757944
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1122021869351026}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.011246264, y: 0.012905359, z: 0.007912934}
+  m_Center: {x: 0.0018608272, y: 0.008968711, z: 0.002175957}
 --- !u!65 &65956482536313824
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -225,7 +238,7 @@ BoxCollider:
   m_GameObject: {fileID: 1276017762064320}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.011675421, y: 0.002006629, z: 0.011103987}
   m_Center: {x: 2.3283064e-10, y: 0, z: -4.656613e-10}
