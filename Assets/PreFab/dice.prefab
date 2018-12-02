@@ -20,9 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4264908107215112}
   - component: {fileID: 54344821993344242}
+  - component: {fileID: 65511520042389982}
   m_Layer: 0
   m_Name: dice
-  m_TagString: Untagged
+  m_TagString: collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82,7 +83,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1272833150178712}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.474, y: 1.2185079, z: 0.0798003}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4003035520042126}
@@ -202,6 +203,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &65511520042389982
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1272833150178712}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.010083011, y: 0.008098558, z: 0.010472748}
+  m_Center: {x: 0.00011122818, y: 0.0053180363, z: -0.0000637645}
 --- !u!65 &65963958528321676
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -210,7 +223,7 @@ BoxCollider:
   m_GameObject: {fileID: 1987935527527328}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.009999999, y: 0.009999999, z: 0.009999999}
   m_Center: {x: 0, y: 0, z: 0}

@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 65636788878853990}
   m_Layer: 0
   m_Name: Caramel
-  m_TagString: Untagged
+  m_TagString: collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1077095743624934}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.20690084, y: 1.2379277, z: -0.005884605}
   m_LocalScale: {x: 3, y: 2, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
@@ -110,5 +110,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.013790582, y: 0.013790582, z: 0.013790582}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.010736108, y: 0.011402106, z: 0.011027674}
+  m_Center: {x: -0.0002804995, y: -0.0011942384, z: 0.000055034772}
