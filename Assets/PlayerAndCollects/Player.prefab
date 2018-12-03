@@ -37,13 +37,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1792558028170936}
-  m_LocalRotation: {x: -0, y: -0.4282649, z: -0, w: -0.90365326}
-  m_LocalPosition: {x: 0, y: -0.01, z: 0.02}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.754, y: 1.2286, z: 0.02}
+  m_LocalScale: {x: 0.07028933, y: 0.07028933, z: 0.07028933}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -309.285, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23716956862373390
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -59,7 +59,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 99fe3ad3065184fdcbf1a282e9dbb3c8, type: 2}
+  - {fileID: 2100000, guid: 560360d9650d74283a9d8aacd3fcb216, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -95,7 +95,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 25
   m_Drag: 1
-  m_AngularDrag: 0.9
+  m_AngularDrag: 0.5
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -112,8 +112,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d91f7777a124b9ba8ba5abae9e17b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 300
+  maxSpeed: 10
+  minSpeed: 0
+  speed: 0
+  acceleration: 1
   turn: 0.5
+  bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  originalBallDiameter: {fileID: 135157287890514656}
+  ballTimer: 0
+  fastTimer: 0
 --- !u!135 &135157287890514656
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -124,5 +133,5 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.3934577
+  m_Center: {x: -0.03711069, y: 0, z: 0.00040812168}
