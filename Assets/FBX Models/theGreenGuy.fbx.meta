@@ -12,6 +12,17 @@ ModelImporter:
     100012: LeftArm2
     100014: RightArm
     100016: //RootNode
+    100018: LeftFoot
+    100020: LeftHand
+    100022: RightFoot
+    100024: RightHand
+    100026: theGreenGuy:AntennaBall
+    100028: theGreenGuy:body
+    100030: theGreenGuy:Head
+    100032: theGreenGuy:LeftArm
+    100034: theGreenGuy:LeftArm1
+    100036: theGreenGuy:LeftArm2
+    100038: theGreenGuy:RightArm
     400000: AntennaBall
     400002: AntennaBar
     400004: body
@@ -21,6 +32,17 @@ ModelImporter:
     400012: LeftArm2
     400014: RightArm
     400016: //RootNode
+    400018: LeftFoot
+    400020: LeftHand
+    400022: RightFoot
+    400024: RightHand
+    400026: theGreenGuy:AntennaBall
+    400028: theGreenGuy:body
+    400030: theGreenGuy:Head
+    400032: theGreenGuy:LeftArm
+    400034: theGreenGuy:LeftArm1
+    400036: theGreenGuy:LeftArm2
+    400038: theGreenGuy:RightArm
     2100000: lambert1
     2300000: AntennaBall
     2300002: AntennaBar
@@ -30,6 +52,17 @@ ModelImporter:
     2300010: LeftArm1
     2300012: LeftArm2
     2300014: RightArm
+    2300016: LeftFoot
+    2300018: LeftHand
+    2300020: RightFoot
+    2300022: RightHand
+    2300024: theGreenGuy:AntennaBall
+    2300026: theGreenGuy:body
+    2300028: theGreenGuy:Head
+    2300030: theGreenGuy:LeftArm
+    2300032: theGreenGuy:LeftArm1
+    2300034: theGreenGuy:LeftArm2
+    2300036: theGreenGuy:RightArm
     3300000: AntennaBall
     3300002: AntennaBar
     3300004: body
@@ -38,6 +71,17 @@ ModelImporter:
     3300010: LeftArm1
     3300012: LeftArm2
     3300014: RightArm
+    3300016: LeftFoot
+    3300018: LeftHand
+    3300020: RightFoot
+    3300022: RightHand
+    3300024: theGreenGuy:AntennaBall
+    3300026: theGreenGuy:body
+    3300028: theGreenGuy:Head
+    3300030: theGreenGuy:LeftArm
+    3300032: theGreenGuy:LeftArm1
+    3300034: theGreenGuy:LeftArm2
+    3300036: theGreenGuy:RightArm
     4300000: Head
     4300002: AntennaBar
     4300004: AntennaBall
@@ -46,6 +90,17 @@ ModelImporter:
     4300010: RightArm
     4300012: LeftArm1
     4300014: LeftArm2
+    4300016: theGreenGuy:Head
+    4300018: theGreenGuy:AntennaBall
+    4300020: theGreenGuy:body
+    4300022: theGreenGuy:LeftArm
+    4300024: theGreenGuy:RightArm
+    4300026: theGreenGuy:LeftArm1
+    4300028: theGreenGuy:LeftArm2
+    4300030: RightHand
+    4300032: LeftHand
+    4300034: RightFoot
+    4300036: LeftFoot
   externalObjects: {}
   materials:
     importMaterials: 1
