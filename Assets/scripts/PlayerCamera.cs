@@ -17,8 +17,9 @@ public class PlayerCamera : MonoBehaviour {
     private float rotateSpeed = 0.3f;
     float camRotateSpeed = 180f;
     public float rotateAround = 70f;
-    public Transform playerTrans
-        ;
+    public Transform playerTrans;
+    float cameraHeight = 0.7f;
+    float cameraPan = 0f;
    
 
     // Use this for initialization
@@ -26,6 +27,7 @@ public class PlayerCamera : MonoBehaviour {
     {
         //Calculate and store the offset value by getting the distance between the player's position and camera's position.
         offset = transform.position - player.transform.position;
+        rotateAround = playerTrans.eulerAngles.y - 45f;
       //  ballSize = 1.0f;
 
     }
@@ -42,7 +44,9 @@ public class PlayerCamera : MonoBehaviour {
             transform.position = player.transform.position + offset * 2f;
         }
         
-       // transform.LookAt(playerPos);
+        Quaternion rotation = Quaternion.Euler(cameraHeight, rotateAround, cameraPan);
+        
+        transform.LookAt(playerTrans);
         
         
     }

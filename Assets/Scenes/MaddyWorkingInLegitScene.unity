@@ -1069,6 +1069,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1128515844587268, guid: 897dda51c6e284c98bb7e3fac185513f,
     type: 2}
   m_PrefabInternal: {fileID: 366101804}
+--- !u!4 &168288216 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4445371655182888, guid: 897dda51c6e284c98bb7e3fac185513f,
+    type: 2}
+  m_PrefabInternal: {fileID: 366101804}
 --- !u!1 &172237494
 GameObject:
   m_ObjectHideFlags: 0
@@ -10133,7 +10138,6 @@ GameObject:
   - component: {fileID: 1286531559}
   - component: {fileID: 1286531558}
   - component: {fileID: 1286531557}
-  - component: {fileID: 1286531556}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: Untagged
@@ -10141,7 +10145,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1286531556
+--- !u!114 &1286531557
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10155,22 +10159,7 @@ MonoBehaviour:
   player: {fileID: 168288210}
   ballSize: 0
   rotateAround: 70
-  playerTrans: {fileID: 0}
---- !u!114 &1286531557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1286531555}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21b458c7fbc1006499e34d82b0d16176, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 168288210}
-  ballSize: 0
-  rotateAround: 70
-  playerTrans: {fileID: 0}
+  playerTrans: {fileID: 168288216}
 --- !u!81 &1286531558
 AudioListener:
   m_ObjectHideFlags: 0
