@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerCamera : MonoBehaviour {
 
   public GameObject player;       //Public variable to store a reference to the player game object
-    public Transform playerPos;
+    //public Transform playerPos;
     
 
 
@@ -16,7 +16,9 @@ public class PlayerCamera : MonoBehaviour {
     private float HorizontalAxis;
     private float rotateSpeed = 0.3f;
     float camRotateSpeed = 180f;
-    public float rotateAround = 70f;  
+    public float rotateAround = 70f;
+    public Transform playerTrans
+        ;
    
 
     // Use this for initialization
@@ -47,12 +49,18 @@ public class PlayerCamera : MonoBehaviour {
 
     void Update()
     {
-        //HorizontalAxis = Input.GetAxis ("Rotate");
+       // HorizontalAxis = Input.GetAxis ("Rotate");
 
 
         if (Input.GetKey(KeyCode.Q))
         {
-            playerPos.transform.Rotate(Vector3.left * Time.deltaTime, Space.Self);
+            //playerPos.transform.Rotate(Vector3.left * Time.deltaTime, Space.Self);
         }
+        
+        offset = Quaternion.AngleAxis (Input.GetAxis("Rotate"), Vector3.up) * offset;
+        transform.position = playerTrans.position + offset; 
+        transform.LookAt(playerTrans.position);
     }
+    
+    
 }
