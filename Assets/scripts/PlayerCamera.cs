@@ -24,7 +24,7 @@ public class PlayerCamera : MonoBehaviour {
     {
         //Calculate and store the offset value by getting the distance between the player's position and camera's position.
         offset = transform.position - player.transform.position;
-        ballSize = 1.0f;
+      //  ballSize = 1.0f;
 
     }
     
@@ -40,7 +40,7 @@ public class PlayerCamera : MonoBehaviour {
             transform.position = player.transform.position + offset * 2f;
         }
         
-        transform.LookAt(playerPos);
+       // transform.LookAt(playerPos);
         
         
     }
