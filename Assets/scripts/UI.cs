@@ -10,32 +10,100 @@ public class UI : MonoBehaviour
 	public ballBehavior player;
 	
 	public Text meterDisplay;
+	public Text mmText;
+	public Text timeDisplay;
 	
 	public Image ballSize;
 	public SphereCollider katCollider;
 	public GameObject katamariBall;
 	public float katRadius;
+	public Image timerHolder;
 
 	public GameObject clockHand;
 
+	public float firstTimer = 120;
 
-	private float timeLeft = 360 / 20;
+	public float timeLeft;
+	public float secondTimer;
+
+	public bool orangeTimer;
+	public float handSpeed; 
+
+
+	//private float timeLeft = 360 / 20;
 
 	// Use this for initialization
 	void Start () {
 		//ballSize.rectTransform.localScale = new Vector3(4,4,1);
+		timeLeft = 120;
+		handSpeed = 2f;
+		secondTimer = 60f;
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
-		clockHand.transform.Rotate(0f,0f, -Time.deltaTime * 2.75f);
-
+		timerFunctionality();
+		//Debug.Log(Time.realtimeSinceStartup);
 		
-		float radius = (player.bounds.max.x + player.bounds.max.y + player.bounds.max.z) / 3;
+		//clockHand.transform.Rotate(0f,0f, -Time.deltaTime * 2.75f);
 		
-		ballSize.rectTransform.localScale = new Vector3(radius/2,radius/2,1);
 
-		meterDisplay.text = "radius: " +  (radius*2).ToString();
+		/*if (clockHand.transform.rotation.z <= -270 && clockHand.transform.rotation.z >= -290)
+		{
+			clockHand.transform.localRotation.z = (0,0,0);
+		}*/
+		if (timeLeft > 60 && orangeTimer == false)
+		{
+			timeDisplay.text = "02";
+		} else if (timeLeft <= 60 && orangeTimer == false)
+		{
+			timeDisplay.text = "01";
+		}
+		else
+		{
+			timeDisplay.text = secondTimer.ToString("F1");
+		}
+
+		float radius = (player.bounds.max.x + player.bounds.max.y + player.bounds.max.z) / 6;
+		
+		ballSize.rectTransform.localScale = new Vector3(radius/10,radius/10,1);
+		
+		Debug.Log("Radius = " + radius);
+		meterDisplay.text = "cm: " +  ((int)radius *2).ToString("F0");
+		mmText.text = "mm: " +( (radius - (int) radius) * 10).ToString("F0");
+	}
+
+	public void timerFunctionality()
+	{
+		timeLeft -= Time.deltaTime;
+
+		if (timeLeft >= 0 && orangeTimer == false)
+		{
+			clockHand.transform.Rotate(0f,0f, -Time.deltaTime * 2.75f);
+		}
+		else
+		{
+			if (orangeTimer == false)
+			{
+				clockHand.transform.eulerAngles = new Vector3(0, 0, 90);
+			}
+
+			timeLeft = 60;
+			orangeTimer = true;
+		}
+
+		if (orangeTimer == true)
+		{
+			clockHand.transform.Rotate(0f,0f, -Time.deltaTime * 5.9f);
+			secondTimer -= Time.deltaTime;
+			timerHolder.GetComponent<Image>().color = Color.yellow;
+
+			if (secondTimer <= 0)
+			{
+				Time.timeScale = 0;
+			}
+		}
+		
 	}
 }

@@ -23,7 +23,7 @@ public class CameraTest : MonoBehaviour {
     [Header("Map coordinate script")]
 //    public worldVectorMap wvm;
     RaycastHit hit;
-    float cameraHeight = 0.02f;
+    float cameraHeight = 55f;
     float cameraPan = 0f;
     float camRotateSpeed = 180f;
     Vector3 camPosition;
@@ -50,7 +50,7 @@ public class CameraTest : MonoBehaviour {
        // VerticalAxis = Input.GetAxis("Vertical");
  
         //Offset of the targets transform (Since the pivot point is usually at the feet).
-        Vector3 targetOffset = new Vector3(target.position.x, (target.position.y) * 2f, (target.position.z));
+        Vector3 targetOffset = new Vector3(target.position.x, (target.position.y + 0.4f), target.position.z);
         Quaternion rotation = Quaternion.Euler(cameraHeight, rotateAround, cameraPan);
         Vector3 vectorMask = Vector3.one;
         Vector3 rotateVector = rotation * vectorMask;    
@@ -74,7 +74,7 @@ public class CameraTest : MonoBehaviour {
         #endregion
  
         rotateAround += HorizontalAxis * camRotateSpeed * Time.deltaTime;
-        DistanceUp = Mathf.Clamp(DistanceUp += VerticalAxis, -0.079f, 2);
+        DistanceUp = Mathf.Clamp(DistanceUp += VerticalAxis, -0.79f, 1.2f);
         DistanceAway = Mathf.Clamp(DistanceAway += VerticalAxis, minDistance, maxDistance);
  
     }
