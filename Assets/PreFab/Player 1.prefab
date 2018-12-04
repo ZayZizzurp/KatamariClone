@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114154861117269402}
   - component: {fileID: 54925790427175938}
   m_Layer: 0
-  m_Name: Katamari
+  m_Name: Player 1
   m_TagString: player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -196,6 +196,7 @@ MonoBehaviour:
   originalBallDiameter: {fileID: 135240265492606596}
   ballTimer: 0
   fastTimer: 0
+  mainCamera: {fileID: 0}
 --- !u!135 &135240265492606596
 SphereCollider:
   m_ObjectHideFlags: 1

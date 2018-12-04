@@ -20,6 +20,7 @@ public class ballBehavior : MonoBehaviour
 	public float ballTimer = 0f;
 	public float fastTimer = 0f;
 	private Rigidbody rb;
+	public GameObject mainCamera;
 	
 	
 
@@ -34,6 +35,13 @@ public class ballBehavior : MonoBehaviour
 
 	void FixedUpdate ()
 	{
+		Vector3 fromCameraToMe = transform.position - mainCamera.transform.position;
+		fromCameraToMe.y = 0; // First, zero out any vertical component, so the movement plane is always horizontal.
+		fromCameraToMe.Normalize();
+		
+		
+		
+		
 		
 		ballTimer += Time.deltaTime;
 		Debug.Log(massBall);
@@ -41,9 +49,10 @@ public class ballBehavior : MonoBehaviour
 		float moveHorizontal = Input.GetAxis ("Horizontal"); //moving left and right
 		float moveVertical = Input.GetAxis ("Vertical"); //moving up and down
 		float RotateVertical = Input.GetAxis("Rotate");
-
-		Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
-		Vector3 rotate = new Vector3(0.0f,0.0f,RotateVertical);
+		
+		
+		Vector3 movement = (fromCameraToMe * moveVertical + mainCamera.transform.right * moveHorizontal);
+		//Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
 		if (Input.GetKey((KeyCode.UpArrow)) || Input.GetKey((KeyCode.DownArrow))|| Input.GetKey((KeyCode.RightArrow)) || Input.GetKey((KeyCode.LeftArrow)) || Input.GetKey((KeyCode.W))|| Input.GetKey((KeyCode.A)) || Input.GetKey((KeyCode.S)) || Input.GetKey((KeyCode.D)))
 		{
 			speed = acceleration + speed;
