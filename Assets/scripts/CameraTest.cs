@@ -50,7 +50,7 @@ public class CameraTest : MonoBehaviour {
        // VerticalAxis = Input.GetAxis("Vertical");
  
         //Offset of the targets transform (Since the pivot point is usually at the feet).
-        Vector3 targetOffset = new Vector3(target.position.x, (target.position.y + 2f), target.position.z);
+        Vector3 targetOffset = new Vector3(target.position.x, (target.position.y) * 2f, (target.position.z));
         Quaternion rotation = Quaternion.Euler(cameraHeight, rotateAround, cameraPan);
         Vector3 vectorMask = Vector3.one;
         Vector3 rotateVector = rotation * vectorMask;    
@@ -74,7 +74,7 @@ public class CameraTest : MonoBehaviour {
         #endregion
  
         rotateAround += HorizontalAxis * camRotateSpeed * Time.deltaTime;
-        DistanceUp = Mathf.Clamp(DistanceUp += VerticalAxis, -0.079f, 0.5f);
+        DistanceUp = Mathf.Clamp(DistanceUp += VerticalAxis, -0.079f, 2);
         DistanceAway = Mathf.Clamp(DistanceAway += VerticalAxis, minDistance, maxDistance);
  
     }
