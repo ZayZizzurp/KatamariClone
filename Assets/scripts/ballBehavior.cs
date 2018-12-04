@@ -43,6 +43,7 @@ public class ballBehavior : MonoBehaviour
 		float RotateVertical = Input.GetAxis("Rotate");
 
 		Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
+		Vector3 rotate = new Vector3(0.0f,0.0f,RotateVertical);
 		if (Input.GetKey((KeyCode.UpArrow)) || Input.GetKey((KeyCode.DownArrow))|| Input.GetKey((KeyCode.RightArrow)) || Input.GetKey((KeyCode.LeftArrow)) || Input.GetKey((KeyCode.W))|| Input.GetKey((KeyCode.A)) || Input.GetKey((KeyCode.S)) || Input.GetKey((KeyCode.D)))
 		{
 			speed = acceleration + speed;
@@ -70,6 +71,7 @@ public class ballBehavior : MonoBehaviour
 			fastTimer = 0;
 			ballTimer = 0;
 		}
+		
 		
 		//Debug.Log(speed);
 		rb.AddForce (movement * speed); //how the ball is able to roll
