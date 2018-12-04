@@ -20,6 +20,8 @@ public class ballBehavior : MonoBehaviour
 	public float ballTimer = 0f;
 	public float fastTimer = 0f;
 	private Rigidbody rb;
+	
+	
 
 
 	void Start ()
@@ -37,6 +39,7 @@ public class ballBehavior : MonoBehaviour
 		//Debug.Log(massBall); //printing out the mass that has been added to the ball
 		float moveHorizontal = Input.GetAxis ("Horizontal"); //moving left and right
 		float moveVertical = Input.GetAxis ("Vertical"); //moving up and down
+		float RotateVertical = Input.GetAxis("Rotate");
 
 		Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
 		if (Input.GetKey((KeyCode.UpArrow)) || Input.GetKey((KeyCode.DownArrow))|| Input.GetKey((KeyCode.RightArrow)) || Input.GetKey((KeyCode.LeftArrow)) || Input.GetKey((KeyCode.W))|| Input.GetKey((KeyCode.A)) || Input.GetKey((KeyCode.S)) || Input.GetKey((KeyCode.D)))
