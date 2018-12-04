@@ -19,12 +19,13 @@ public class ballBehavior : MonoBehaviour
 	public SphereCollider originalBallDiameter;
 	public float ballTimer = 0f;
 	public float fastTimer = 0f;
-	private collactable collectableScript;
 	private Rigidbody rb;
+	
+	
+
 
 	void Start ()
 	{
-		collectableScript = GetComponent<collactable>();
 		rb = GetComponent<Rigidbody>(); //getting rigidbody of ball
 		bounds = originalBallDiameter.bounds;
 	}
@@ -39,6 +40,7 @@ public class ballBehavior : MonoBehaviour
 		//Debug.Log(massBall); //printing out the mass that has been added to the ball
 		float moveHorizontal = Input.GetAxis ("Horizontal"); //moving left and right
 		float moveVertical = Input.GetAxis ("Vertical"); //moving up and down
+		float RotateVertical = Input.GetAxis("Rotate");
 
 		Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
 		if (Input.GetKey((KeyCode.UpArrow)) || Input.GetKey((KeyCode.DownArrow))|| Input.GetKey((KeyCode.RightArrow)) || Input.GetKey((KeyCode.LeftArrow)) || Input.GetKey((KeyCode.W))|| Input.GetKey((KeyCode.A)) || Input.GetKey((KeyCode.S)) || Input.GetKey((KeyCode.D)))
@@ -83,45 +85,108 @@ public class ballBehavior : MonoBehaviour
 		}
 	}
 
+//	void OnCollisionEnter(Collision col)
+//	{
+//		if (col.gameObject.tag == "collectable") //if ball runs into an object
+//		{
+//			if (massBall < 35 && col.rigidbody.mass < 3)
+//			{
+//				
+//				//rb.mass += col.rigidbody.mass; //mass of ball is now added to mass of collectable
+//				massBall += col.rigidbody.mass;
+//				//massBall += collectMass; //mass collected is added to variable
+//				Destroy(col.rigidbody); //getting rid of the rigidbody on collectable
+//				col.transform.parent = transform; //parenting object to ball
+//				//maxSpeed += 5;
+//				bounds.Encapsulate(transform.localScale + col.transform.localScale);
+//				//originalBallDiameter.radius += 0.2f;
+//				col.gameObject.GetComponent<CapsuleCollider>().enabled = false;
+//				col.gameObject.GetComponent<BoxCollider>().enabled = false;
+//				col.gameObject.GetComponent<SphereCollider>().enabled = true;
+//				originalBallDiameter.radius += 0.1f;
+//			}
+//
+//			if (massBall > 34 && rb.mass < 60 && col.rigidbody.mass < 7)
+//			{
+//				//rb.mass += col.rigidbody.mass; //mass of ball is now added to mass of collectable
+//				massBall += col.rigidbody.mass;
+//				//massBall += collectMass; //mass collected is added to variable
+//				Destroy(col.rigidbody); //getting rid of the rigidbody on collectable
+//				col.transform.parent = transform; //parenting object to ball
+//				//maxSpeed += 20;
+//				bounds.Encapsulate(transform.localScale + col.transform.localScale);
+//				col.gameObject.GetComponent<CapsuleCollider>().enabled = false;
+//				col.gameObject.GetComponent<BoxCollider>().enabled = false;
+//				col.gameObject.GetComponent<SphereCollider>().enabled = true;
+//				originalBallDiameter.radius += 0.1f;
+//
+//
+//
+//
+//			}
+//			if (massBall > 60 && rb.mass < 100 && col.rigidbody.mass < 15)
+//			{
+//				massBall += col.rigidbody.mass;
+//				//rb.mass += col.rigidbody.mass; //mass of ball is now added to mass of collectable
+//				//massBall += collectMass; //mass collected is added to variable
+//				Destroy(col.rigidbody); //getting rid of the rigidbody on collectable
+//				col.transform.parent = transform; //parenting object to ball
+//				//maxSpeed += 40;
+//				bounds.Encapsulate(transform.localScale + col.transform.localScale);
+//				col.gameObject.GetComponent<CapsuleCollider>().enabled = false;
+//				col.gameObject.GetComponent<BoxCollider>().enabled = false;
+//				col.gameObject.GetComponent<SphereCollider>().enabled = true;
+//				originalBallDiameter.radius += 0.1f;
+//
+//
+//
+//			}
+//		}
+//		
+//	}
+	
 	void OnCollisionEnter(Collision col)
 	{
-		if (col.gameObject.tag == "collectable") //if ball runs into an object
-		{
-			if (massBall < 35 && col.rigidbody.mass < 3)
+		if (col.gameObject.tag == "collectable")
+			if (massBall < 35 && col.rigidbody.mass < 3 && col.rigidbody.mass < rb.mass)
 			{
-				//rb.mass += col.rigidbody.mass; //mass of ball is now added to mass of collectable
-				massBall += col.rigidbody.mass;
-				//massBall += collectMass; //mass collected is added to variable
-				Destroy(col.rigidbody); //getting rid of the rigidbody on collectable
-				col.transform.parent = transform; //parenting object to ball
-				maxSpeed += 5;
 				bounds.Encapsulate(transform.localScale + col.transform.localScale);
-			}
-
-			if (massBall > 34 && rb.mass < 60 && col.rigidbody.mass < 7)
-			{
-				//rb.mass += col.rigidbody.mass; //mass of ball is now added to mass of collectable
+				rb.mass += col.rigidbody.mass;
 				massBall += col.rigidbody.mass;
-				//massBall += collectMass; //mass collected is added to variable
-				Destroy(col.rigidbody); //getting rid of the rigidbody on collectable
-				col.transform.parent = transform; //parenting object to ball
-				maxSpeed += 20;
-
+				Destroy(col.rigidbody);
+				col.transform.parent = transform;
+				col.gameObject.GetComponent<BoxCollider>().enabled = false;
 			}
-			if (massBall > 60 && rb.mass < 100 && col.rigidbody.mass < 15)
-			{
-				massBall += col.rigidbody.mass;
-				//rb.mass += col.rigidbody.mass; //mass of ball is now added to mass of collectable
-				//massBall += collectMass; //mass collected is added to variable
-				Destroy(col.rigidbody); //getting rid of the rigidbody on collectable
-				col.transform.parent = transform; //parenting object to ball
-				maxSpeed += 40;
-
-			}
+		
+		if (massBall > 34 && col.rigidbody.mass < 7 && col.rigidbody.mass < rb.mass)
+		{
+			bounds.Encapsulate(transform.localScale + col.transform.localScale);
+			rb.mass += col.rigidbody.mass;
+			massBall += col.rigidbody.mass;
+			Destroy(col.rigidbody);
+			col.transform.parent = transform;
+			col.gameObject.GetComponent<BoxCollider>().enabled = false;
+		}
+		if (massBall > 60 && col.rigidbody.mass < 15 && col.rigidbody.mass < rb.mass)
+		{
+			bounds.Encapsulate(transform.localScale + col.transform.localScale);
+			rb.mass += col.rigidbody.mass;
+			massBall += col.rigidbody.mass;
+			Destroy(col.rigidbody);
+			col.transform.parent = transform;
+			col.gameObject.GetComponent<BoxCollider>().enabled = false;
 		}
 		
+		if (massBall > 100 && col.rigidbody.mass < 35 && col.rigidbody.mass < rb.mass)
+		{
+			bounds.Encapsulate(transform.localScale + col.transform.localScale);
+			rb.mass += col.rigidbody.mass;
+			massBall += col.rigidbody.mass;
+			Destroy(col.rigidbody);
+			col.transform.parent = transform;
+			col.gameObject.GetComponent<BoxCollider>().enabled = false;
+		}
 	}
-	
 	
 	
 }
