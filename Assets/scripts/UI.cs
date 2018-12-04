@@ -65,8 +65,10 @@ public class UI : MonoBehaviour
 			timeDisplay.text = secondTimer.ToString("F1");
 		}
 
+		//figures out the size of the ball 
 		float radius = (player.bounds.max.x + player.bounds.max.y + player.bounds.max.z) / 6;
 		
+		//controls the ba;;'s display size by finding the ball's radius
 		ballSize.rectTransform.localScale = new Vector3(radius/10,radius/10,1);
 		
 		Debug.Log("Radius = " + radius);
