@@ -33,6 +33,7 @@ public class ballBehavior : MonoBehaviour
 
 	void FixedUpdate ()
 	{
+		
 		ballTimer += Time.deltaTime;
 		Debug.Log(massBall);
 		//Debug.Log(massBall); //printing out the mass that has been added to the ball
