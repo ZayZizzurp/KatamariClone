@@ -6,6 +6,7 @@ public class PlayerCamera : MonoBehaviour {
 
   public GameObject player;       //Public variable to store a reference to the player game object
     public Transform playerPos;
+    
 
 
     private Vector3 offset;         //Private variable to store the offset distance between the player and camera
@@ -46,8 +47,12 @@ public class PlayerCamera : MonoBehaviour {
 
     void Update()
     {
-        HorizontalAxis = Input.GetAxis ("Rotate");
-        
-        rotateAround += HorizontalAxis * camRotateSpeed * Time.deltaTime;
+        //HorizontalAxis = Input.GetAxis ("Rotate");
+
+
+        if (Input.GetKey(KeyCode.Q))
+        {
+            playerPos.transform.Rotate(Vector3.left * Time.deltaTime, Space.Self);
+        }
     }
 }
