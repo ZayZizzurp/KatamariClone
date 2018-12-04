@@ -146,6 +146,7 @@ public class ballBehavior : MonoBehaviour
 		if (col.gameObject.tag == "collectable")
 			if (massBall < 35 && col.rigidbody.mass < 3 && col.rigidbody.mass < rb.mass)
 			{
+				bounds.Encapsulate(transform.localScale + col.transform.localScale);
 				rb.mass += col.rigidbody.mass;
 				massBall += col.rigidbody.mass;
 				Destroy(col.rigidbody);
@@ -155,6 +156,7 @@ public class ballBehavior : MonoBehaviour
 		
 		if (massBall > 34 && col.rigidbody.mass < 7 && col.rigidbody.mass < rb.mass)
 		{
+			bounds.Encapsulate(transform.localScale + col.transform.localScale);
 			rb.mass += col.rigidbody.mass;
 			massBall += col.rigidbody.mass;
 			Destroy(col.rigidbody);
@@ -163,6 +165,7 @@ public class ballBehavior : MonoBehaviour
 		}
 		if (massBall > 60 && col.rigidbody.mass < 15 && col.rigidbody.mass < rb.mass)
 		{
+			bounds.Encapsulate(transform.localScale + col.transform.localScale);
 			rb.mass += col.rigidbody.mass;
 			massBall += col.rigidbody.mass;
 			Destroy(col.rigidbody);
@@ -172,6 +175,7 @@ public class ballBehavior : MonoBehaviour
 		
 		if (massBall > 100 && col.rigidbody.mass < 35 && col.rigidbody.mass < rb.mass)
 		{
+			bounds.Encapsulate(transform.localScale + col.transform.localScale);
 			rb.mass += col.rigidbody.mass;
 			massBall += col.rigidbody.mass;
 			Destroy(col.rigidbody);
