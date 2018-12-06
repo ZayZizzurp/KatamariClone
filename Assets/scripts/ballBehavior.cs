@@ -20,6 +20,12 @@ public class ballBehavior : MonoBehaviour
 	public float ballTimer = 0f;
 	public float fastTimer = 0f;
 	private Rigidbody rb;
+	public GameObject curGameObject;
+	public LastObjectDisplay lod;
+	public Transform cameraPos;
+	
+	
+	//public readonly List<KatamariObject> attachedObjects = new List<KatamariObject>();
 	
 	
 
@@ -27,7 +33,7 @@ public class ballBehavior : MonoBehaviour
 	void Start ()
 	{
 		rb = GetComponent<Rigidbody>(); //getting rigidbody of ball
-		bounds = originalBallDiameter.bounds;
+		bounds = new Bounds(transform.position, originalBallDiameter.bounds.size);
 	}
 
 	
@@ -36,7 +42,7 @@ public class ballBehavior : MonoBehaviour
 	{
 		
 		ballTimer += Time.deltaTime;
-		Debug.Log(massBall);
+		//Debug.Log(massBall);
 		//Debug.Log(massBall); //printing out the mass that has been added to the ball
 		float moveHorizontal = Input.GetAxis ("Horizontal"); //moving left and right
 		float moveVertical = Input.GetAxis ("Vertical"); //moving up and down
@@ -83,6 +89,9 @@ public class ballBehavior : MonoBehaviour
 		{
 			speed = minSpeed;
 		}
+
+		bounds.center = transform.position;
+
 	}
 
 //	void OnCollisionEnter(Collision col)
@@ -144,48 +153,97 @@ public class ballBehavior : MonoBehaviour
 //		}
 //		
 //	}
-	
+
 	void OnCollisionEnter(Collision col)
 	{
 		if (col.gameObject.tag == "collectable")
+		{
+			curGameObject = col.gameObject;
+			//bounds.Encapsulate(bounds.center + transform.localScale +  transform.InverseTransformPoint(col.rigidbody.ClosestPointOnBounds(transform.localPosition)));
+			//bounds.Encapsulate(bounds.center + transform.localScale + col.transform.localScale);
+			//bounds.Encapsulate(bounds.center + col.gameObject.GetComponent<BoxCollider>().size);
+			bounds.Encapsulate(new Bounds(col.transform.position, col.gameObject.GetComponent<BoxCollider>().size));
+			//bounds.Encapsulate(new Bounds(col.transform.position, col.gameObject.GetComponent<Renderer>().bounds.size));
+
 			if (massBall < 35 && col.rigidbody.mass < 3 && col.rigidbody.mass < rb.mass)
 			{
-				bounds.Encapsulate(transform.localScale + col.transform.localScale);
+
 				rb.mass += col.rigidbody.mass;
 				massBall += col.rigidbody.mass;
 				Destroy(col.rigidbody);
 				col.transform.parent = transform;
 				col.gameObject.GetComponent<BoxCollider>().enabled = false;
 			}
+
+			if (massBall > 34 && col.rigidbody.mass < 7 && col.rigidbody.mass < rb.mass)
+			{
+				//bounds.Encapsulate(transform.localScale + col.transform.localScale);
+				rb.mass += col.rigidbody.mass;
+				massBall += col.rigidbody.mass;
+				Destroy(col.rigidbody);
+				col.transform.parent = transform;
+				col.gameObject.GetComponent<BoxCollider>().enabled = false;
+			}
+
+			if (massBall > 60 && col.rigidbody.mass < 15 && col.rigidbody.mass < rb.mass)
+			{
+				//bounds.Encapsulate(transform.localScale + col.transform.localScale);
+				rb.mass += col.rigidbody.mass;
+				massBall += col.rigidbody.mass;
+				Destroy(col.rigidbody);
+				col.transform.parent = transform;
+				col.gameObject.GetComponent<BoxCollider>().enabled = false;
+			}
+
+			if (massBall > 100 && col.rigidbody.mass < 35 && col.rigidbody.mass < rb.mass)
+			{
+				//bounds.Encapsulate(transform.localScale + col.transform.localScale);
+				rb.mass += col.rigidbody.mass;
+				massBall += col.rigidbody.mass;
+				Destroy(col.rigidbody);
+				col.transform.parent = transform;
+				col.gameObject.GetComponent<BoxCollider>().enabled = false;
+			}
+			
+			lod.DisplayObject(curGameObject);
+			
+			//CalculateLocalBounds();
+		}
+			
+	}
+
+	private void OnDrawGizmos()
+	{
+		Gizmos.color = Color.black;
+		Gizmos.DrawWireCube(bounds.center, bounds.size);
+		Gizmos.color = Color.yellow;
 		
-		if (massBall > 34 && col.rigidbody.mass < 7 && col.rigidbody.mass < rb.mass)
+		/*foreach(Renderer renderer in GetComponentsInChildren<Renderer>())
 		{
-			bounds.Encapsulate(transform.localScale + col.transform.localScale);
-			rb.mass += col.rigidbody.mass;
-			massBall += col.rigidbody.mass;
-			Destroy(col.rigidbody);
-			col.transform.parent = transform;
-			col.gameObject.GetComponent<BoxCollider>().enabled = false;
-		}
-		if (massBall > 60 && col.rigidbody.mass < 15 && col.rigidbody.mass < rb.mass)
+			//bounds.Encapsulate(renderer.bounds);
+			Gizmos.DrawWireCube(renderer.bounds.center, renderer.bounds.size);
+			
+		}*/
+
+	}
+	
+	private void CalculateLocalBounds()
+	{
+		Quaternion currentRotation = this.transform.rotation;
+		this.transform.rotation = Quaternion.Euler(0f,0f,0f);
+ 
+		bounds = new Bounds(this.transform.position, Vector3.one);
+ 
+		foreach(Renderer renderer in GetComponentsInChildren<Renderer>())
 		{
-			bounds.Encapsulate(transform.localScale + col.transform.localScale);
-			rb.mass += col.rigidbody.mass;
-			massBall += col.rigidbody.mass;
-			Destroy(col.rigidbody);
-			col.transform.parent = transform;
-			col.gameObject.GetComponent<BoxCollider>().enabled = false;
+			bounds.Encapsulate(renderer.bounds);
 		}
-		
-		if (massBall > 100 && col.rigidbody.mass < 35 && col.rigidbody.mass < rb.mass)
-		{
-			bounds.Encapsulate(transform.localScale + col.transform.localScale);
-			rb.mass += col.rigidbody.mass;
-			massBall += col.rigidbody.mass;
-			Destroy(col.rigidbody);
-			col.transform.parent = transform;
-			col.gameObject.GetComponent<BoxCollider>().enabled = false;
-		}
+ 
+		Vector3 localCenter = bounds.center - this.transform.position;
+		bounds.center = localCenter;
+		Debug.Log("The local bounds of this model is " + bounds);
+ 
+		this.transform.rotation = currentRotation;
 	}
 	
 	
