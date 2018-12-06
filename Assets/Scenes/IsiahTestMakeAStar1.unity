@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43669316, g: 0.4842909, b: 0.56453896, a: 1}
+  m_IndirectSpecularColor: {r: 0.4366934, g: 0.48429132, b: 0.56453973, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1644,6 +1644,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114678333628171194, guid: 403fffe596206492a9f3d768ca5a5b27,
+        type: 2}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 1870808622}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 403fffe596206492a9f3d768ca5a5b27, type: 2}
   m_IsPrefabAsset: 0
@@ -16981,18 +16986,18 @@ Camera:
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 2
-  m_SensorSize: {x: 36, y: 24}
+  m_SensorSize: {x: 50, y: 19}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
+  m_FocalLength: 43
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.01
   far clip plane: 1000
-  field of view: 26.991467
+  field of view: 24.916492
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -17017,13 +17022,13 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1870808622}
-  m_LocalRotation: {x: -0.005281068, y: 0.66691345, z: -0.0034458423, w: 0.74510854}
-  m_LocalPosition: {x: -1.899, y: 1.303, z: -0.043}
+  m_LocalRotation: {x: -0.026876464, y: 0.66673315, z: 0.015886674, w: 0.7446423}
+  m_LocalPosition: {x: -1.535, y: 1.354, z: -0.016}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -0.18800001, y: 83.662, z: -0.698}
+  m_LocalEulerAnglesHint: {x: -3.509, y: 83.702, z: -0.69900006}
 --- !u!114 &1870808627
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17036,9 +17041,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 450480047}
-  playerPos: {fileID: 198974663}
   ballSize: 0
   rotateAround: 70
+  playerTrans: {fileID: 198974663}
+  cameraHeight: 0.7
 --- !u!114 &1870808628
 MonoBehaviour:
   m_ObjectHideFlags: 0
