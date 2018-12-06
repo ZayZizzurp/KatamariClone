@@ -2500,33 +2500,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 1128515844587268, guid: 897dda51c6e284c98bb7e3fac185513f, type: 2}
-      propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
     - target: {fileID: 114154861117269402, guid: 897dda51c6e284c98bb7e3fac185513f,
         type: 2}
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 1286531555}
-    - target: {fileID: 4445371655182888, guid: 897dda51c6e284c98bb7e3fac185513f, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 135240265492606596, guid: 897dda51c6e284c98bb7e3fac185513f,
-        type: 2}
-      propertyPath: m_Center.x
-      value: 0.013352769
-      objectReference: {fileID: 0}
-    - target: {fileID: 135240265492606596, guid: 897dda51c6e284c98bb7e3fac185513f,
-        type: 2}
-      propertyPath: m_Center.z
-      value: 0.01058333
-      objectReference: {fileID: 0}
-    - target: {fileID: 135240265492606596, guid: 897dda51c6e284c98bb7e3fac185513f,
-        type: 2}
-      propertyPath: m_Radius
-      value: 0.25256804
+    - target: {fileID: 1128515844587268, guid: 897dda51c6e284c98bb7e3fac185513f, type: 2}
+      propertyPath: m_Name
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 897dda51c6e284c98bb7e3fac185513f, type: 2}
