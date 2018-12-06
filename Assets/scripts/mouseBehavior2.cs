@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class mouseBehavior2 : MonoBehaviour {
+public class mouseBehavior2 : MonoBehaviour
+{
 
+	public ballBehavior player;
 	void Update () {
 		//step 1: define a ray
 		//not vector3.forward, that's the world's forward
@@ -44,7 +46,8 @@ public class mouseBehavior2 : MonoBehaviour {
 	{
 		if (col.gameObject.tag == "player")
 		{
-			col.rigidbody.mass -= 2f;
+			player.massBall -= 2f;
+			
 		}
 	}
 }

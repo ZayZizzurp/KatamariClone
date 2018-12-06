@@ -13,7 +13,7 @@ public class ballBehavior : MonoBehaviour
    public float speed = 0; //speed of ball
    public float acceleration = 2; //acceleration of the ball as you go forward
    public float turn; //turn amount
-   private float massBall = 25; //mass of the ball as it grows
+   public float massBall = 25; //mass of the ball as it grows
    private float collectMass = 2; //mass of collectables 
    public Bounds bounds;
    public SphereCollider originalBallDiameter;
@@ -57,6 +57,11 @@ public class ballBehavior : MonoBehaviour
       else if (massBall >= 90f && massBall < 120f)
       {
          originalBallDiameter.radius = 0.5f;
+      }
+      
+      else if (massBall >= 120f && massBall < 180f)
+      {
+         originalBallDiameter.radius = 0.6f;
       }
       Vector3 fromCameraToMe = transform.position - mainCamera.transform.position;
       fromCameraToMe.y = 0; // First, zero out any vertical component, so the movement plane is always horizontal.
