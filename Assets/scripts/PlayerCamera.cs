@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerCamera : MonoBehaviour {
 
   public GameObject player;       //Public variable to store a reference to the player game object
-    public Transform playerPos;
+    //public Transform playerPos;
     
 
 
@@ -16,7 +16,10 @@ public class PlayerCamera : MonoBehaviour {
     private float HorizontalAxis;
     private float rotateSpeed = 0.3f;
     float camRotateSpeed = 180f;
-    public float rotateAround = 70f;  
+    public float rotateAround = 70f;
+    public Transform playerTrans;
+    float cameraHeight = 0.7f;
+    float cameraPan = 0f;
    
 
     // Use this for initialization
@@ -24,7 +27,8 @@ public class PlayerCamera : MonoBehaviour {
     {
         //Calculate and store the offset value by getting the distance between the player's position and camera's position.
         offset = transform.position - player.transform.position;
-        ballSize = 1.0f;
+        rotateAround = playerTrans.eulerAngles.y - 45f;
+      //  ballSize = 1.0f;
 
     }
     
@@ -40,19 +44,27 @@ public class PlayerCamera : MonoBehaviour {
             transform.position = player.transform.position + offset * 2f;
         }
         
-        transform.LookAt(playerPos);
+        Quaternion rotation = Quaternion.Euler(cameraHeight, rotateAround, cameraPan);
+        
+        transform.LookAt(playerTrans);
         
         
     }
 
     void Update()
     {
-        //HorizontalAxis = Input.GetAxis ("Rotate");
+       // HorizontalAxis = Input.GetAxis ("Rotate");
 
 
         if (Input.GetKey(KeyCode.Q))
         {
-            playerPos.transform.Rotate(Vector3.left * Time.deltaTime, Space.Self);
+            //playerPos.transform.Rotate(Vector3.left * Time.deltaTime, Space.Self);
         }
+        
+        offset = Quaternion.AngleAxis (Input.GetAxis("Rotate"), Vector3.up) * offset;
+        transform.position = playerTrans.position + offset; 
+        transform.LookAt(playerTrans.position);
     }
+    
+    
 }
