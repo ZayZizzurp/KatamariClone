@@ -1662,6 +1662,11 @@ SphereCollider:
   m_CorrespondingSourceObject: {fileID: 135157287890514656, guid: 403fffe596206492a9f3d768ca5a5b27,
     type: 2}
   m_PrefabInternal: {fileID: 198974661}
+--- !u!4 &198974663 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4738660166394468, guid: 403fffe596206492a9f3d768ca5a5b27,
+    type: 2}
+  m_PrefabInternal: {fileID: 198974661}
 --- !u!1 &206674736
 GameObject:
   m_ObjectHideFlags: 0
@@ -17043,7 +17048,7 @@ MonoBehaviour:
   player: {fileID: 450480047}
   ballSize: 0
   rotateAround: 70
-  playerTrans: {fileID: 0}
+  playerTrans: {fileID: 198974663}
 --- !u!114 &1870808628
 MonoBehaviour:
   m_ObjectHideFlags: 0
