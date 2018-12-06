@@ -44,6 +44,20 @@ public class ballBehavior : MonoBehaviour
 
    void FixedUpdate ()
    {
+      Debug.Log(massBall);
+      if (massBall >= 40f && massBall < 60)
+      {
+         originalBallDiameter.radius = 0.3f;
+      }
+      
+      else if (massBall >= 60f && massBall < 90f)
+      {
+         originalBallDiameter.radius = 0.4f;
+      }
+      else if (massBall >= 90f && massBall < 120f)
+      {
+         originalBallDiameter.radius = 0.5f;
+      }
       Vector3 fromCameraToMe = transform.position - mainCamera.transform.position;
       fromCameraToMe.y = 0; // First, zero out any vertical component, so the movement plane is always horizontal.
       fromCameraToMe.Normalize();
