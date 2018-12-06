@@ -7,15 +7,16 @@ public class CameraTest : MonoBehaviour {
    [Header("Camera Properties")]
     private float DistanceAway;                     //how far the camera is from the player.
  
-    public float minDistance = -1;                //min camera distance
-    public float maxDistance = 2;                //max camera distance
+   // public float minDistance = -1;                //min camera distance
+    //public float maxDistance = 2;                //max camera distance
  
-    public float DistanceUp = -1;                    //how high the camera is above the player
+    public float DistanceUp = 1f;                    //how high the camera is above the player
     public float smooth = 4.0f;                    //how smooth the camera moves into place
     public float rotateAround = 70f;            //the angle at which you will rotate the camera (on an axis)
  
     [Header("Player to follow")]
-    public Transform target;                    //the target the camera follows
+    public Transform target;      
+    private Vector3 offset; //the target the camera follows
  
     [Header("Layer(s) to include")]
     public LayerMask CamOcclusion;                //the layers that will be affected by collision
@@ -23,9 +24,9 @@ public class CameraTest : MonoBehaviour {
     [Header("Map coordinate script")]
 //    public worldVectorMap wvm;
     RaycastHit hit;
-    float cameraHeight = 55f;
+    float cameraHeight = 0.7f;
     float cameraPan = 0f;
-    float camRotateSpeed = 180f;
+    float camRotateSpeed = 70f;
     Vector3 camPosition;
     Vector3 camMask;
     Vector3 followMask;
@@ -39,7 +40,7 @@ public class CameraTest : MonoBehaviour {
     void Start(){
         //the statement below automatically positions the camera behind the target.
         rotateAround = target.eulerAngles.y - 45f;
- 
+        offset = transform.position - target.transform.position;
  
     }
  
@@ -50,7 +51,7 @@ public class CameraTest : MonoBehaviour {
        // VerticalAxis = Input.GetAxis("Vertical");
  
         //Offset of the targets transform (Since the pivot point is usually at the feet).
-        Vector3 targetOffset = new Vector3(target.position.x, (target.position.y + 0.4f), target.position.z);
+        Vector3 targetOffset = new Vector3(target.position.x, (target.position.y), target.position.z);
         Quaternion rotation = Quaternion.Euler(cameraHeight, rotateAround, cameraPan);
         Vector3 vectorMask = Vector3.one;
         Vector3 rotateVector = rotation * vectorMask;    
@@ -74,8 +75,8 @@ public class CameraTest : MonoBehaviour {
         #endregion
  
         rotateAround += HorizontalAxis * camRotateSpeed * Time.deltaTime;
-        DistanceUp = Mathf.Clamp(DistanceUp += VerticalAxis, -0.79f, 1.2f);
-        DistanceAway = Mathf.Clamp(DistanceAway += VerticalAxis, minDistance, maxDistance);
+       // DistanceUp = Mathf.Clamp(DistanceUp += VerticalAxis, -0.79f, 1.2f);
+        //DistanceAway = Mathf.Clamp(DistanceAway += VerticalAxis, minDistance, maxDistance);
  
     }
     void smoothCamMethod(){
