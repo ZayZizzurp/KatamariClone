@@ -19,6 +19,7 @@ public class PlayerCamera : MonoBehaviour {
     public float rotateAround = 70f;
     public Transform playerTrans;
     public float cameraHeight = 1.0f;
+    public float offsetHeight;
     float cameraPan = 0f;
    
 
@@ -41,7 +42,7 @@ public class PlayerCamera : MonoBehaviour {
         //Zoom out more if ball gets bigger
         if (ballSize > 1.0f && ballSize <= 2.0f)
         {
-            transform.position = player.transform.position + offset * 2f;
+            transform.position = player.transform.position + offset * offsetHeight;
         }
         
         Quaternion rotation = Quaternion.Euler(cameraHeight, rotateAround, cameraPan);
@@ -53,13 +54,6 @@ public class PlayerCamera : MonoBehaviour {
 
     void Update()
     {
-       // HorizontalAxis = Input.GetAxis ("Rotate");
-
-
-        if (Input.GetKey(KeyCode.Q))
-        {
-            //playerPos.transform.Rotate(Vector3.left * Time.deltaTime, Space.Self);
-        }
         
         offset = Quaternion.AngleAxis (Input.GetAxis("Rotate"), Vector3.up) * offset;
         transform.position = playerTrans.position + offset; 
