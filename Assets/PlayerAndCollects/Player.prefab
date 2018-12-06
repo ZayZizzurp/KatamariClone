@@ -55,7 +55,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1224190552038658}
   m_LocalRotation: {x: -0, y: 0.4282649, z: -0, w: -0.90365326}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.007}
   m_LocalScale: {x: 18.051186, y: 18.051182, z: 18.051186}
   m_Children: []
   m_Father: {fileID: 4738660166394468}
@@ -67,9 +67,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1792558028170936}
-  m_LocalRotation: {x: -0, y: -0.4282649, z: -0, w: -0.90365326}
-  m_LocalPosition: {x: -0.9609, y: 1.2351, z: -0.1071}
-  m_LocalScale: {x: 0.07520959, y: 0.07520959, z: 0.07520959}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.225, y: 1.2286, z: 0.02}
+  m_LocalScale: {x: 0.07028933, y: 0.07028933, z: 0.07028933}
   m_Children:
   - {fileID: 4341256122141978}
   m_Father: {fileID: 0}
@@ -188,7 +188,7 @@ MonoBehaviour:
   maxSpeed: 10
   minSpeed: 0
   speed: 0
-  acceleration: 1
+  acceleration: 2
   turn: 0.5
   bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -196,6 +196,7 @@ MonoBehaviour:
   originalBallDiameter: {fileID: 135157287890514656}
   ballTimer: 0
   fastTimer: 0
+  mainCamera: {fileID: 0}
 --- !u!135 &135157287890514656
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -206,5 +207,5 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.26367602
-  m_Center: {x: 0.013352771, y: 0, z: 0.036572758}
+  m_Radius: 0.29708534
+  m_Center: {x: -0.005514479, y: 0, z: 0.014445668}

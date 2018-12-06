@@ -6,17 +6,21 @@ using UnityEngine.UI;
 
 public class LastObjectDisplay : MonoBehaviour
 {
-
+	public ballBehavior bb;
 	public GameObject objectSpawner;
-	public GameObject cube;
-	public GameObject cylinder;
-	public GameObject plane;
+	public GameObject chesnut;
+	public GameObject thumbtack;
+	public GameObject match;
+	public GameObject caramel;
 	public GameObject cubePrefab;
 	public GameObject currentObject;
+	public GameObject curDisplay;
 
 	public Text lastObjectText;
 
 	public bool displayEmpty;
+
+	public Transform camera;
 
 	private float rotateSpeed = 25f;
 	
@@ -32,37 +36,81 @@ public class LastObjectDisplay : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update () {
-		transform.Rotate(Vector3.up * rotateSpeed * Time.deltaTime);
-		if (displayEmpty == false)
+		//transform.Rotate(Vector3.up * rotateSpeed * Time.deltaTime);
+		/*if (displayEmpty == false)
 		{
 			currentObject.transform.Rotate(Vector3.up * rotateSpeed * Time.deltaTime);
-		}
+		}*/
 
-		if (Input.GetKeyDown(KeyCode.Q))
-		{
-			WipeList();
-			lastObjectText.text = "Cube";
-			cube.gameObject.SetActive(true);
-		}
-		if (Input.GetKeyDown(KeyCode.W))
-		{
-			WipeList();
-			lastObjectText.text = "Cylinder";
-			cylinder.gameObject.SetActive(true);
-		}
-		if (Input.GetKeyDown(KeyCode.E))
-		{
-			WipeList();
-			lastObjectText.text = "Plane";
-			plane.gameObject.SetActive(true);
-		}
+		
 	}
 
 	public void WipeList()
 	{
-		lastObjectText.text = " ";
-		cube.gameObject.SetActive(false);
-		cylinder.gameObject.SetActive(false);
-		plane.gameObject.SetActive(false);
+		//lastObjectText.text = " ";
+		chesnut.gameObject.SetActive(false);
+		thumbtack.gameObject.SetActive(false);
+		match.gameObject.SetActive(false);
+		caramel.gameObject.SetActive(false);
+	}
+
+	
+
+	public void DisplayObject(GameObject x)
+	{
+		if (curDisplay != null)
+		{
+			Destroy(curDisplay.gameObject);
+		}
+
+		curDisplay = (GameObject) Instantiate(x.gameObject);
+		curDisplay.transform.parent = transform;
+		curDisplay.transform.localScale = new Vector3(6.2f,6.2f,6.2f);
+		curDisplay.transform.localPosition = (transform.position - camera.transform.position);
+		curDisplay.transform.eulerAngles = new Vector3(0,0,0) + transform.eulerAngles;
+		curDisplay.GetComponent<Rigidbody>().isKinematic = true;
+		
+
+		//curDisplay.GetComponent<Rigidbody>()
+
+
+
+
+
+
+		if (x.gameObject.name.Contains("Caramel"))
+		{
+			lastObjectText.text = "Caramel";
+		}
+
+		if (x.gameObject.name.Contains("chestnut"))
+		{
+			lastObjectText.text = "Chestnut";
+		}
+		if (x.gameObject.name.Contains("Thumbtack"))
+		{
+
+			lastObjectText.text = "Thumbtack";
+		}
+		
+		if (x.gameObject.name.Contains("Match"))
+		{
+			lastObjectText.text = "Match";
+		}
+
+		if (x.gameObject.name.Contains("HeadScrew"))
+		{
+			lastObjectText.text = "Phillips Head Screw";
+		}
+		
+		if (x.gameObject.name.Contains("dice"))
+		{
+			lastObjectText.text = "Dice";
+		}
+		
+		if (x.gameObject.name.Contains("Short Screw"))
+		{
+			lastObjectText.text = "Short Screw";
+		}
 	}
 }
