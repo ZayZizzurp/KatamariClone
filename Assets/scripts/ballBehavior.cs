@@ -20,12 +20,7 @@ public class ballBehavior : MonoBehaviour
 	public float ballTimer = 0f;
 	public float fastTimer = 0f;
 	private Rigidbody rb;
-	public GameObject curGameObject;
-	public LastObjectDisplay lod;
-	public Transform cameraPos;
-	
-	
-	//public readonly List<KatamariObject> attachedObjects = new List<KatamariObject>();
+	public GameObject mainCamera;
 	
 	
 
@@ -33,22 +28,31 @@ public class ballBehavior : MonoBehaviour
 	void Start ()
 	{
 		rb = GetComponent<Rigidbody>(); //getting rigidbody of ball
-		bounds = new Bounds(transform.position, originalBallDiameter.bounds.size);
+		bounds = originalBallDiameter.bounds;
 	}
 
 	
 
 	void FixedUpdate ()
 	{
+		Vector3 fromCameraToMe = transform.position - mainCamera.transform.position;
+		fromCameraToMe.y = 0; // First, zero out any vertical component, so the movement plane is always horizontal.
+		fromCameraToMe.Normalize();
+		
+		
+		
+		
 		
 		ballTimer += Time.deltaTime;
-		//Debug.Log(massBall);
+		Debug.Log(massBall);
 		//Debug.Log(massBall); //printing out the mass that has been added to the ball
 		float moveHorizontal = Input.GetAxis ("Horizontal"); //moving left and right
 		float moveVertical = Input.GetAxis ("Vertical"); //moving up and down
 		float RotateVertical = Input.GetAxis("Rotate");
-
-		Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
+		
+		
+		Vector3 movement = (fromCameraToMe * moveVertical + mainCamera.transform.right * moveHorizontal);
+		//Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
 		if (Input.GetKey((KeyCode.UpArrow)) || Input.GetKey((KeyCode.DownArrow))|| Input.GetKey((KeyCode.RightArrow)) || Input.GetKey((KeyCode.LeftArrow)) || Input.GetKey((KeyCode.W))|| Input.GetKey((KeyCode.A)) || Input.GetKey((KeyCode.S)) || Input.GetKey((KeyCode.D)))
 		{
 			speed = acceleration + speed;
@@ -77,6 +81,7 @@ public class ballBehavior : MonoBehaviour
 			ballTimer = 0;
 		}
 		
+		
 		//Debug.Log(speed);
 		rb.AddForce (movement * speed); //how the ball is able to roll
 		rb.AddTorque(transform.up * turn * moveHorizontal);// ball turn and roll
@@ -89,9 +94,6 @@ public class ballBehavior : MonoBehaviour
 		{
 			speed = minSpeed;
 		}
-
-		bounds.center = transform.position;
-
 	}
 
 //	void OnCollisionEnter(Collision col)
@@ -153,97 +155,48 @@ public class ballBehavior : MonoBehaviour
 //		}
 //		
 //	}
-
+	
 	void OnCollisionEnter(Collision col)
 	{
 		if (col.gameObject.tag == "collectable")
-		{
-			curGameObject = col.gameObject;
-			//bounds.Encapsulate(bounds.center + transform.localScale +  transform.InverseTransformPoint(col.rigidbody.ClosestPointOnBounds(transform.localPosition)));
-			//bounds.Encapsulate(bounds.center + transform.localScale + col.transform.localScale);
-			//bounds.Encapsulate(bounds.center + col.gameObject.GetComponent<BoxCollider>().size);
-			bounds.Encapsulate(new Bounds(col.transform.position, col.gameObject.GetComponent<BoxCollider>().size));
-			//bounds.Encapsulate(new Bounds(col.transform.position, col.gameObject.GetComponent<Renderer>().bounds.size));
-
 			if (massBall < 35 && col.rigidbody.mass < 3 && col.rigidbody.mass < rb.mass)
 			{
-
+				bounds.Encapsulate(transform.localScale + col.transform.localScale);
 				rb.mass += col.rigidbody.mass;
 				massBall += col.rigidbody.mass;
 				Destroy(col.rigidbody);
 				col.transform.parent = transform;
 				col.gameObject.GetComponent<BoxCollider>().enabled = false;
 			}
-
-			if (massBall > 34 && col.rigidbody.mass < 7 && col.rigidbody.mass < rb.mass)
-			{
-				//bounds.Encapsulate(transform.localScale + col.transform.localScale);
-				rb.mass += col.rigidbody.mass;
-				massBall += col.rigidbody.mass;
-				Destroy(col.rigidbody);
-				col.transform.parent = transform;
-				col.gameObject.GetComponent<BoxCollider>().enabled = false;
-			}
-
-			if (massBall > 60 && col.rigidbody.mass < 15 && col.rigidbody.mass < rb.mass)
-			{
-				//bounds.Encapsulate(transform.localScale + col.transform.localScale);
-				rb.mass += col.rigidbody.mass;
-				massBall += col.rigidbody.mass;
-				Destroy(col.rigidbody);
-				col.transform.parent = transform;
-				col.gameObject.GetComponent<BoxCollider>().enabled = false;
-			}
-
-			if (massBall > 100 && col.rigidbody.mass < 35 && col.rigidbody.mass < rb.mass)
-			{
-				//bounds.Encapsulate(transform.localScale + col.transform.localScale);
-				rb.mass += col.rigidbody.mass;
-				massBall += col.rigidbody.mass;
-				Destroy(col.rigidbody);
-				col.transform.parent = transform;
-				col.gameObject.GetComponent<BoxCollider>().enabled = false;
-			}
-			
-			lod.DisplayObject(curGameObject);
-			
-			//CalculateLocalBounds();
-		}
-			
-	}
-
-	private void OnDrawGizmos()
-	{
-		Gizmos.color = Color.black;
-		Gizmos.DrawWireCube(bounds.center, bounds.size);
-		Gizmos.color = Color.yellow;
 		
-		/*foreach(Renderer renderer in GetComponentsInChildren<Renderer>())
+		if (massBall > 34 && col.rigidbody.mass < 7 && col.rigidbody.mass < rb.mass)
 		{
-			//bounds.Encapsulate(renderer.bounds);
-			Gizmos.DrawWireCube(renderer.bounds.center, renderer.bounds.size);
-			
-		}*/
-
-	}
-	
-	private void CalculateLocalBounds()
-	{
-		Quaternion currentRotation = this.transform.rotation;
-		this.transform.rotation = Quaternion.Euler(0f,0f,0f);
- 
-		bounds = new Bounds(this.transform.position, Vector3.one);
- 
-		foreach(Renderer renderer in GetComponentsInChildren<Renderer>())
-		{
-			bounds.Encapsulate(renderer.bounds);
+			bounds.Encapsulate(transform.localScale + col.transform.localScale);
+			rb.mass += col.rigidbody.mass;
+			massBall += col.rigidbody.mass;
+			Destroy(col.rigidbody);
+			col.transform.parent = transform;
+			col.gameObject.GetComponent<BoxCollider>().enabled = false;
 		}
- 
-		Vector3 localCenter = bounds.center - this.transform.position;
-		bounds.center = localCenter;
-		Debug.Log("The local bounds of this model is " + bounds);
- 
-		this.transform.rotation = currentRotation;
+		if (massBall > 60 && col.rigidbody.mass < 15 && col.rigidbody.mass < rb.mass)
+		{
+			bounds.Encapsulate(transform.localScale + col.transform.localScale);
+			rb.mass += col.rigidbody.mass;
+			massBall += col.rigidbody.mass;
+			Destroy(col.rigidbody);
+			col.transform.parent = transform;
+			col.gameObject.GetComponent<BoxCollider>().enabled = false;
+		}
+		
+		if (massBall > 100 && col.rigidbody.mass < 35 && col.rigidbody.mass < rb.mass)
+		{
+			bounds.Encapsulate(transform.localScale + col.transform.localScale);
+			rb.mass += col.rigidbody.mass;
+			massBall += col.rigidbody.mass;
+			Destroy(col.rigidbody);
+			col.transform.parent = transform;
+			col.gameObject.GetComponent<BoxCollider>().enabled = false;
+		}
 	}
 	
 	
