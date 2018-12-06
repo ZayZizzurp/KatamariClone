@@ -18,7 +18,7 @@ public class PlayerCamera : MonoBehaviour {
     float camRotateSpeed = 180f;
     public float rotateAround = 70f;
     public Transform playerTrans;
-    float cameraHeight = 0.7f;
+    public float cameraHeight = 1.0f;
     float cameraPan = 0f;
    
 
