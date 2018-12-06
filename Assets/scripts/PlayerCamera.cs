@@ -14,7 +14,7 @@ public class PlayerCamera : MonoBehaviour {
     public float ballSize;
     
     private float HorizontalAxis;
-    private float rotateSpeed = 0.3f;
+    public float rotateSpeed = 1f;
     float camRotateSpeed = 180f;
     public float rotateAround = 70f;
     public Transform playerTrans;
