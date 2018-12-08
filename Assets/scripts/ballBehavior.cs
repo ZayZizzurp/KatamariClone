@@ -63,6 +63,15 @@ public class ballBehavior : MonoBehaviour
       {
          originalBallDiameter.radius = 0.6f;
       }
+      
+        else if (massBall >= 180 && massBall < 250f)
+            {
+               originalBallDiameter.radius = 0.7f;
+            }
+      else if (massBall >= 250 && massBall < 300f)
+      {
+         originalBallDiameter.radius = 0.8f;
+      }
       Vector3 fromCameraToMe = transform.position - mainCamera.transform.position;
       fromCameraToMe.y = 0; // First, zero out any vertical component, so the movement plane is always horizontal.
       fromCameraToMe.Normalize();

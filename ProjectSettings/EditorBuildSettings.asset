@@ -5,7 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/IsiahTestMakeAStar1.unity
+    guid: 1527b3a9c8cecf64e873ad0957f9f9f7
+  - enabled: 1
+    path: Assets/Scenes/EndScreen.unity
+    guid: c742b375de97c4262b90c021a0a39b78
   m_configObjects: {}

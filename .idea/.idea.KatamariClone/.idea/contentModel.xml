@@ -17,6 +17,7 @@
           <e p="LastObjectDisplay.cs" t="Include" />
           <e p="mouseBehavior2.cs" t="Include" />
           <e p="PlayerCamera.cs" t="Include" />
+          <e p="StartOver.cs" t="Include" />
           <e p="UI.cs" t="Include" />
         </e>
       </e>
