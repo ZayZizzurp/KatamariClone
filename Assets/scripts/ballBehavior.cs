@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Timers;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ballBehavior : MonoBehaviour
 {
@@ -44,6 +45,13 @@ public class ballBehavior : MonoBehaviour
 
    void FixedUpdate ()
    {
+      if (massBall > 300)
+      {
+         SceneManager.LoadScene(2); //win state for now
+      }
+      
+      
+      
       Debug.Log(massBall);
       if (massBall >= 40f && massBall < 60)
       {
