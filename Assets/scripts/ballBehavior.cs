@@ -255,10 +255,51 @@ public class ballBehavior : MonoBehaviour
             col.gameObject.GetComponent<BoxCollider>().enabled = false;
          }
          
+         if (massBall > 150 && col.rigidbody.mass < 70 && col.rigidbody.mass < rb.mass)
+         {
+            //bounds.Encapsulate(transform.localScale + col.transform.localScale);
+            //rb.mass += col.rigidbody.mass;
+            massBall += col.rigidbody.mass;
+            Destroy(col.rigidbody);
+            col.transform.parent = transform;
+            col.gameObject.GetComponent<BoxCollider>().enabled = false;
+         }
+
+         
+         if (massBall > 220 && col.rigidbody.mass < 100 && col.rigidbody.mass < rb.mass)
+         {
+            //bounds.Encapsulate(transform.localScale + col.transform.localScale);
+            //rb.mass += col.rigidbody.mass;
+            massBall += col.rigidbody.mass;
+            Destroy(col.rigidbody);
+            col.transform.parent = transform;
+            col.gameObject.GetComponent<BoxCollider>().enabled = false;
+         }
+         
+         if (massBall > 270 && col.rigidbody.mass < 160 && col.rigidbody.mass < rb.mass)
+         {
+            //bounds.Encapsulate(transform.localScale + col.transform.localScale);
+            //rb.mass += col.rigidbody.mass;
+            massBall += col.rigidbody.mass;
+            Destroy(col.rigidbody);
+            col.transform.parent = transform;
+            col.gameObject.GetComponent<BoxCollider>().enabled = false;
+         }
+         
+         else
+         {
+            massBall += col.rigidbody.mass;
+            Destroy(col.rigidbody);
+            col.transform.parent = transform;
+            col.gameObject.GetComponent<BoxCollider>().enabled = false;
+         }
+         
          lod.DisplayObject(curGameObject);
          
          //CalculateLocalBounds();
       }
+      
+       
          
    }
 
