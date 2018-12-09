@@ -13,7 +13,7 @@ public class ballBehavior : MonoBehaviour
    public float speed = 0; //speed of ball
    public float acceleration = 2; //acceleration of the ball as you go forward
    public float turn; //turn amount
-   private float massBall = 25; //mass of the ball as it grows
+   public float massBall = 25; //mass of the ball as it grows
    private float collectMass = 2; //mass of collectables 
    public Bounds bounds;
    public SphereCollider originalBallDiameter;
@@ -176,7 +176,7 @@ public class ballBehavior : MonoBehaviour
          //bounds.Encapsulate(bounds.center + transform.localScale +  transform.InverseTransformPoint(col.rigidbody.ClosestPointOnBounds(transform.localPosition)));
          //bounds.Encapsulate(bounds.center + transform.localScale + col.transform.localScale);
          //bounds.Encapsulate(bounds.center + col.gameObject.GetComponent<BoxCollider>().size);
-         bounds.Encapsulate(new Bounds(col.transform.position, col.gameObject.GetComponent<BoxCollider>().size));
+         // proper bounds: bounds.Encapsulate(new Bounds(col.transform.position, col.gameObject.GetComponent<BoxCollider>().size));
          //bounds.Encapsulate(new Bounds(col.transform.position, col.gameObject.GetComponent<Renderer>().bounds.size));
 
          if (massBall < 35 && col.rigidbody.mass < 3 && col.rigidbody.mass < rb.mass)

@@ -14,6 +14,10 @@ public class UI : MonoBehaviour
 	public Text mmText;
 	public Text timeDisplay;
 	
+	public Text meterDisplay2;
+	public Text mmText2;
+	public Text timeDisplay2;
+	
 	public Image ballSize;
 	public SphereCollider katCollider;
 	public GameObject katamariBall;
@@ -68,15 +72,18 @@ public class UI : MonoBehaviour
 
 		//figures out the size of the ball 
 		//float radius = (player.bounds.max.x + player.bounds.max.y + player.bounds.max.z) / 6;
-		float radius = (player.bounds.size.x + player.bounds.size.y + player.bounds.size.z) / 2;
+		// proper radius: float radius = (player.bounds.size.x + player.bounds.size.y + player.bounds.size.z) / 2;
+		float radius = player.massBall / 100;
 		// best: float radius = Mathf.Max(Mathf.Max(player.bounds.size.x, player.bounds.size.y),  player.bounds.size.z) * 3;
 		//max(max(a,b), c)
 		//controls the ba;;'s display size by finding the ball's radius
-		ballSize.rectTransform.localScale = new Vector3(radius,radius,1);
+		ballSize.rectTransform.localScale = new Vector3(radius,radius,1)/2;
 		
 		Debug.Log("Radius = " + radius);
 		meterDisplay.text = "cm: " +  ((int)radius *2).ToString("F0");
+		meterDisplay2.text = "cm: " +  ((int)radius *2).ToString("F0");
 		mmText.text = "mm: " +( (radius - (int) radius) * 10).ToString("F0");
+		mmText2.text = "mm: " +( (radius - (int) radius) * 10).ToString("F0");
 	}
 
 	public void timerFunctionality()
