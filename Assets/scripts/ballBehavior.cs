@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Timers;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ballBehavior : MonoBehaviour
 {
@@ -44,6 +45,41 @@ public class ballBehavior : MonoBehaviour
 
    void FixedUpdate ()
    {
+      if (massBall > 700)
+      {
+         SceneManager.LoadScene(2); //win state for now
+      }
+      
+      
+      
+      Debug.Log(massBall);
+      if (massBall >= 40f && massBall < 60)
+      {
+         originalBallDiameter.radius = 0.3f;
+      }
+      
+      else if (massBall >= 60f && massBall < 90f)
+      {
+         originalBallDiameter.radius = 0.4f;
+      }
+      else if (massBall >= 90f && massBall < 120f)
+      {
+         originalBallDiameter.radius = 0.5f;
+      }
+      
+      else if (massBall >= 120f && massBall < 180f)
+      {
+         originalBallDiameter.radius = 0.6f;
+      }
+      
+        else if (massBall >= 180 && massBall < 250f)
+            {
+               originalBallDiameter.radius = 0.7f;
+            }
+      else if (massBall >= 250 && massBall < 300f)
+      {
+         originalBallDiameter.radius = 0.8f;
+      }
       Vector3 fromCameraToMe = transform.position - mainCamera.transform.position;
       fromCameraToMe.y = 0; // First, zero out any vertical component, so the movement plane is always horizontal.
       fromCameraToMe.Normalize();
@@ -219,10 +255,51 @@ public class ballBehavior : MonoBehaviour
             col.gameObject.GetComponent<BoxCollider>().enabled = false;
          }
          
+         if (massBall > 150 && col.rigidbody.mass < 70 && col.rigidbody.mass < rb.mass)
+         {
+            //bounds.Encapsulate(transform.localScale + col.transform.localScale);
+            //rb.mass += col.rigidbody.mass;
+            massBall += col.rigidbody.mass;
+            Destroy(col.rigidbody);
+            col.transform.parent = transform;
+            col.gameObject.GetComponent<BoxCollider>().enabled = false;
+         }
+
+         
+         if (massBall > 220 && col.rigidbody.mass < 100 && col.rigidbody.mass < rb.mass)
+         {
+            //bounds.Encapsulate(transform.localScale + col.transform.localScale);
+            //rb.mass += col.rigidbody.mass;
+            massBall += col.rigidbody.mass;
+            Destroy(col.rigidbody);
+            col.transform.parent = transform;
+            col.gameObject.GetComponent<BoxCollider>().enabled = false;
+         }
+         
+         if (massBall > 270 && col.rigidbody.mass < 160 && col.rigidbody.mass < rb.mass)
+         {
+            //bounds.Encapsulate(transform.localScale + col.transform.localScale);
+            //rb.mass += col.rigidbody.mass;
+            massBall += col.rigidbody.mass;
+            Destroy(col.rigidbody);
+            col.transform.parent = transform;
+            col.gameObject.GetComponent<BoxCollider>().enabled = false;
+         }
+         
+         else
+         {
+            massBall += col.rigidbody.mass;
+            Destroy(col.rigidbody);
+            col.transform.parent = transform;
+            col.gameObject.GetComponent<BoxCollider>().enabled = false;
+         }
+         
          lod.DisplayObject(curGameObject);
          
          //CalculateLocalBounds();
       }
+      
+       
          
    }
 

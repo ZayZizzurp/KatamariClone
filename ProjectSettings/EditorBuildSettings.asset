@@ -5,7 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/ActualGame/IsiahTestMakeAStar1.unity
+    guid: 1527b3a9c8cecf64e873ad0957f9f9f7
+  - enabled: 1
+    path: Assets/Scenes/ActualGame/EndScreen.unity
+    guid: c742b375de97c4262b90c021a0a39b78
+  - enabled: 1
+    path: Assets/Scenes/ActualGame/WinScreen.unity
+    guid: 3b918feb7611746b885c2ac6df1561c7
   m_configObjects: {}

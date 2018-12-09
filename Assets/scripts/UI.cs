@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class UI : MonoBehaviour
@@ -48,6 +49,11 @@ public class UI : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
+		if (secondTimer <= 0)
+		{
+			SceneManager.LoadScene (1);
+		} 
+		
 		timerFunctionality();
 		//Debug.Log(Time.realtimeSinceStartup);
 		
@@ -86,6 +92,9 @@ public class UI : MonoBehaviour
 		mmText2.text = "mm: " +( (radius - (int) radius) * 10).ToString("F0");
 	}
 
+	
+	
+	
 	public void timerFunctionality()
 	{
 		timeLeft -= Time.deltaTime;
