@@ -25,6 +25,8 @@ public class ballBehavior : MonoBehaviour
    public GameObject curGameObject;
    public LastObjectDisplay lod;
    public Transform cameraPos;
+
+   public GameObject katamariBoi;
    
    
    //public readonly List<KatamariObject> attachedObjects = new List<KatamariObject>();
@@ -212,7 +214,7 @@ public class ballBehavior : MonoBehaviour
          //bounds.Encapsulate(bounds.center + transform.localScale +  transform.InverseTransformPoint(col.rigidbody.ClosestPointOnBounds(transform.localPosition)));
          //bounds.Encapsulate(bounds.center + transform.localScale + col.transform.localScale);
          //bounds.Encapsulate(bounds.center + col.gameObject.GetComponent<BoxCollider>().size);
-         // proper bounds: bounds.Encapsulate(new Bounds(col.transform.position, col.gameObject.GetComponent<BoxCollider>().size));
+         // best:bounds.Encapsulate(new Bounds(col.transform.position, col.gameObject.GetComponent<BoxCollider>().size));
          //bounds.Encapsulate(new Bounds(col.transform.position, col.gameObject.GetComponent<Renderer>().bounds.size));
 
          if (massBall < 35 && col.rigidbody.mass < 3 && col.rigidbody.mass < rb.mass)
