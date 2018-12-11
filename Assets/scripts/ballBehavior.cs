@@ -110,7 +110,7 @@ public class ballBehavior : MonoBehaviour
       if (ballTimer > 15 && Input.GetKey(KeyCode.Space)) //speed up when pressing space
       {
          fastTimer += Time.deltaTime;
-         maxSpeed = 175;
+         maxSpeed = 200;
          speed += 30;
          
       }
@@ -286,7 +286,7 @@ public class ballBehavior : MonoBehaviour
             col.gameObject.GetComponent<BoxCollider>().enabled = false;
          }
          
-         else
+         if (massBall > 270 && col.rigidbody.mass < 220 && col.rigidbody.mass < rb.mass)
          {
             massBall += col.rigidbody.mass;
             Destroy(col.rigidbody);
