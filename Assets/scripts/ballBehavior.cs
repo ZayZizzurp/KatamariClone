@@ -49,7 +49,7 @@ public class ballBehavior : MonoBehaviour
 
    void FixedUpdate ()
    {
-      if (massBall > 1000)
+      if (massBall > 1025)
       {
          SceneManager.LoadScene(2); //win state for now
       }
