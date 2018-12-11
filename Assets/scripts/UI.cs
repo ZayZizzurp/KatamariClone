@@ -68,8 +68,8 @@ public class UI : MonoBehaviour
 
 		//figures out the size of the ball 
 		//float radius = (player.bounds.max.x + player.bounds.max.y + player.bounds.max.z) / 6;
-		//float radius = (player.bounds.size.x + player.bounds.size.y + player.bounds.size.z);
-		float radius = Mathf.Max(Mathf.Max(player.bounds.size.x, player.bounds.size.y),  player.bounds.size.z) * 3;
+		float radius = (player.bounds.size.x + player.bounds.size.y + player.bounds.size.z) / 2;
+		// best: float radius = Mathf.Max(Mathf.Max(player.bounds.size.x, player.bounds.size.y),  player.bounds.size.z) * 3;
 		//max(max(a,b), c)
 		//controls the ba;;'s display size by finding the ball's radius
 		ballSize.rectTransform.localScale = new Vector3(radius,radius,1);
