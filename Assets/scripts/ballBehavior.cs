@@ -49,7 +49,7 @@ public class ballBehavior : MonoBehaviour
 
    void FixedUpdate ()
    {
-      if (massBall > 700)
+      if (massBall > 1000)
       {
          SceneManager.LoadScene(2); //win state for now
       }
@@ -212,7 +212,6 @@ public class ballBehavior : MonoBehaviour
    {
       if (col.gameObject.tag == "collectable")
       {
-         curGameObject = col.gameObject;
          //bounds.Encapsulate(bounds.center + transform.localScale +  transform.InverseTransformPoint(col.rigidbody.ClosestPointOnBounds(transform.localPosition)));
          //bounds.Encapsulate(bounds.center + transform.localScale + col.transform.localScale);
          //bounds.Encapsulate(bounds.center + col.gameObject.GetComponent<BoxCollider>().size);
@@ -227,6 +226,7 @@ public class ballBehavior : MonoBehaviour
             Destroy(col.rigidbody);
             col.transform.parent = transform;
             col.gameObject.GetComponent<BoxCollider>().enabled = false;
+            curGameObject = col.gameObject;
          }
 
          if (massBall > 34 && col.rigidbody.mass < 7 && col.rigidbody.mass < rb.mass)
@@ -237,6 +237,7 @@ public class ballBehavior : MonoBehaviour
             Destroy(col.rigidbody);
             col.transform.parent = transform;
             col.gameObject.GetComponent<BoxCollider>().enabled = false;
+            curGameObject = col.gameObject;
          }
 
          if (massBall > 60 && col.rigidbody.mass < 15 && col.rigidbody.mass < rb.mass)
@@ -247,6 +248,7 @@ public class ballBehavior : MonoBehaviour
             Destroy(col.rigidbody);
             col.transform.parent = transform;
             col.gameObject.GetComponent<BoxCollider>().enabled = false;
+            curGameObject = col.gameObject;
          }
 
          if (massBall > 100 && col.rigidbody.mass < 35 && col.rigidbody.mass < rb.mass)
@@ -257,6 +259,7 @@ public class ballBehavior : MonoBehaviour
             Destroy(col.rigidbody);
             col.transform.parent = transform;
             col.gameObject.GetComponent<BoxCollider>().enabled = false;
+            curGameObject = col.gameObject;
          }
          
          if (massBall > 150 && col.rigidbody.mass < 70 && col.rigidbody.mass < rb.mass)
@@ -267,6 +270,7 @@ public class ballBehavior : MonoBehaviour
             Destroy(col.rigidbody);
             col.transform.parent = transform;
             col.gameObject.GetComponent<BoxCollider>().enabled = false;
+            curGameObject = col.gameObject;
          }
 
          
@@ -278,6 +282,7 @@ public class ballBehavior : MonoBehaviour
             Destroy(col.rigidbody);
             col.transform.parent = transform;
             col.gameObject.GetComponent<BoxCollider>().enabled = false;
+            curGameObject = col.gameObject;
          }
          
          if (massBall > 270 && col.rigidbody.mass < 160 && col.rigidbody.mass < rb.mass)
@@ -288,6 +293,7 @@ public class ballBehavior : MonoBehaviour
             Destroy(col.rigidbody);
             col.transform.parent = transform;
             col.gameObject.GetComponent<BoxCollider>().enabled = false;
+            curGameObject = col.gameObject;
          }
          
          if (massBall > 270 && col.rigidbody.mass < 220 && col.rigidbody.mass < rb.mass)
@@ -296,6 +302,7 @@ public class ballBehavior : MonoBehaviour
             Destroy(col.rigidbody);
             col.transform.parent = transform;
             col.gameObject.GetComponent<BoxCollider>().enabled = false;
+            curGameObject = col.gameObject;
          }
          
          lod.DisplayObject(curGameObject);

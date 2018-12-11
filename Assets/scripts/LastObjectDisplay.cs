@@ -6,17 +6,10 @@ using UnityEngine.UI;
 
 public class LastObjectDisplay : MonoBehaviour
 {
-	public ballBehavior bb;
-	public GameObject chesnut;
-	public GameObject thumbtack;
-	public GameObject match;
-	public GameObject caramel;
+	
 	public GameObject curDisplay;
-	public GameObject candy;
-	public GameObject cherries;
-	public GameObject cookie;
-	public GameObject fu;
-	public GameObject pushPin1;
+	
+	
 
 	public Text lastObjectText;
 
@@ -47,14 +40,6 @@ public class LastObjectDisplay : MonoBehaviour
 
 	}
 
-	public void WipeList()
-	{
-		//lastObjectText.text = " ";
-		chesnut.gameObject.SetActive(false);
-		thumbtack.gameObject.SetActive(false);
-		match.gameObject.SetActive(false);
-		caramel.gameObject.SetActive(false);
-	}
 
 	
 
@@ -148,6 +133,40 @@ public class LastObjectDisplay : MonoBehaviour
 		if (x.gameObject.name.Contains("Cookie"))
 		{
 			lastObjectText.text = "Cookie";
+		}
+		if (x.gameObject.name.Contains("pencil"))
+		{
+			lastObjectText.text = "Pencil";
+			curDisplay.transform.localPosition = new Vector3(0,-0.008f,0);
+		}
+		if (x.gameObject.name.Contains("HardEraser"))
+		{
+			lastObjectText.text = "Hard Eraser";
+		}
+		if (x.gameObject.name.Contains("Sandwich"))
+		{
+			lastObjectText.text = "Cookie Sandwich";
+		}
+		if (x.gameObject.name.Contains("Button"))
+		{
+			lastObjectText.text = "Button";
+		}
+		if (x.gameObject.name.Contains("LegoBrick"))
+		{
+			lastObjectText.text = "LegoBrick_2x4";
+			curDisplay.transform.localPosition = new Vector3(0,-0.01f,0);
+		}
+		if (x.gameObject.name.Contains("Film"))
+		{
+			lastObjectText.text = "Film";
+		}
+		if (x.gameObject.name.Contains("Lipstick"))
+		{
+			lastObjectText.text = "Lipstick";
+		}
+		if (x.gameObject.name.Contains("Mouse"))
+		{
+			lastObjectText.text = "Mouse";
 		}
 	}
 }
