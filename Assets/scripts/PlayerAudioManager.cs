@@ -11,12 +11,18 @@ public class PlayerAudioManager : MonoBehaviour
 	public AudioClip Pickup2;
 	public AudioClip CollectableHit;
 
+	public float RandomValue;
+
 	public GameObject Player;
 	// Use this for initialization
 	void Start ()
 	{
 		AudioSource[] audioSources = GetComponents<AudioSource>();
 		PlayerAudio = audioSources[0];
+		
+		CollectableHit = audioSources[0].clip;
+		Pickup1 = audioSources[1].clip;
+		Pickup2 = audioSources[2].clip;
 		
 		
 		ballBehavior ballBehavior = Player.GetComponent<ballBehavior>();
@@ -31,7 +37,17 @@ public class PlayerAudioManager : MonoBehaviour
 	{
 		if (other.gameObject.CompareTag("collectable"))
 		{
-			
+			RandomValue = Random.value;
+
+			if (RandomValue < 0.5)
+			{
+				PlayerAudio.PlayOneShot(Pickup1);
+			}
+
+			if (RandomValue > 0.5)
+			{
+				PlayerAudio.PlayOneShot((Pickup2));
+			}
 		}
 	}
 }
