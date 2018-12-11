@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 public class ballBehavior : MonoBehaviour
 {
 
-   public float maxSpeed = 150; //max speed ball can reach
+   public float maxSpeed = 50; //max speed ball can reach
    public float minSpeed = 0; //min speed it can go to
    public float speed = 0; //speed of ball
    public float acceleration = 2; //acceleration of the ball as you go forward
@@ -27,6 +27,7 @@ public class ballBehavior : MonoBehaviour
    public Transform cameraPos;
    
    
+   
    //public readonly List<KatamariObject> attachedObjects = new List<KatamariObject>();
 
    public GameObject mainCamera;
@@ -39,6 +40,7 @@ public class ballBehavior : MonoBehaviour
    {
       rb = GetComponent<Rigidbody>(); //getting rigidbody of ball
       bounds = new Bounds(transform.position, originalBallDiameter.bounds.size);
+     
    }
 
    
