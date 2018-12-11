@@ -20,7 +20,7 @@ public class PlayerCamera : MonoBehaviour {
     public Transform playerTrans;
     public float cameraHeight = 1.0f;
     public float offsetHeight;
-    float cameraPan = 0f;
+    float cameraPan = 400f;
    
 
     // Use this for initialization
