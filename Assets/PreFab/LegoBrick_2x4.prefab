@@ -159,7 +159,7 @@ GameObject:
   - component: {fileID: 54614571760251996}
   m_Layer: 0
   m_Name: LegoBrick_2x4
-  m_TagString: Untagged
+  m_TagString: collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
