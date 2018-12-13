@@ -3363,7 +3363,7 @@ GameObject:
   - component: {fileID: 116557383}
   m_Layer: 0
   m_Name: GameConsole
-  m_TagString: Untagged
+  m_TagString: collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10856,18 +10856,6 @@ Prefab:
     - target: {fileID: 1343182150871118, guid: 0f1fd876645e09e458fcb1e1bc7b4dfc, type: 2}
       propertyPath: m_Name
       value: Lipstick (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4862592293152532, guid: 0f1fd876645e09e458fcb1e1bc7b4dfc, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 4.092323
-      objectReference: {fileID: 0}
-    - target: {fileID: 4862592293152532, guid: 0f1fd876645e09e458fcb1e1bc7b4dfc, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 4.092323
-      objectReference: {fileID: 0}
-    - target: {fileID: 4862592293152532, guid: 0f1fd876645e09e458fcb1e1bc7b4dfc, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 4.092323
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f1fd876645e09e458fcb1e1bc7b4dfc, type: 2}
@@ -19603,7 +19591,7 @@ GameObject:
   - component: {fileID: 638860198}
   m_Layer: 0
   m_Name: Tissue Box
-  m_TagString: Untagged
+  m_TagString: collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24712,18 +24700,6 @@ Prefab:
       propertyPath: m_Name
       value: Lipstick (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 4862592293152532, guid: 0f1fd876645e09e458fcb1e1bc7b4dfc, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 4.092323
-      objectReference: {fileID: 0}
-    - target: {fileID: 4862592293152532, guid: 0f1fd876645e09e458fcb1e1bc7b4dfc, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 4.092323
-      objectReference: {fileID: 0}
-    - target: {fileID: 4862592293152532, guid: 0f1fd876645e09e458fcb1e1bc7b4dfc, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 4.092323
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f1fd876645e09e458fcb1e1bc7b4dfc, type: 2}
   m_IsPrefabAsset: 0
@@ -28874,18 +28850,6 @@ Prefab:
     - target: {fileID: 1343182150871118, guid: 0f1fd876645e09e458fcb1e1bc7b4dfc, type: 2}
       propertyPath: m_Name
       value: Lipstick (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4862592293152532, guid: 0f1fd876645e09e458fcb1e1bc7b4dfc, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 4.092323
-      objectReference: {fileID: 0}
-    - target: {fileID: 4862592293152532, guid: 0f1fd876645e09e458fcb1e1bc7b4dfc, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 4.092323
-      objectReference: {fileID: 0}
-    - target: {fileID: 4862592293152532, guid: 0f1fd876645e09e458fcb1e1bc7b4dfc, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 4.092323
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f1fd876645e09e458fcb1e1bc7b4dfc, type: 2}
