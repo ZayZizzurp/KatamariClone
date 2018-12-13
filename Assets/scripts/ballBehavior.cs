@@ -49,7 +49,7 @@ public class ballBehavior : MonoBehaviour
 
    void FixedUpdate ()
    {
-      if (massBall > 1000)
+      if (massBall > 1025)
       {
          SceneManager.LoadScene(2); //win state for now
       }
@@ -218,7 +218,7 @@ public class ballBehavior : MonoBehaviour
          // best:bounds.Encapsulate(new Bounds(col.transform.position, col.gameObject.GetComponent<BoxCollider>().size));
          //bounds.Encapsulate(new Bounds(col.transform.position, col.gameObject.GetComponent<Renderer>().bounds.size));
 
-         if (massBall < 35 && col.rigidbody.mass < 3 && col.rigidbody.mass < rb.mass)
+         if (massBall < 35f && col.rigidbody.mass < 3 && col.rigidbody.mass < rb.mass)
          {
 
             //rb.mass += col.rigidbody.mass;
@@ -229,7 +229,7 @@ public class ballBehavior : MonoBehaviour
             curGameObject = col.gameObject;
          }
 
-         if (massBall > 34 && col.rigidbody.mass < 7 && col.rigidbody.mass < rb.mass)
+         if (massBall > 34f && col.rigidbody.mass < 7 && col.rigidbody.mass < rb.mass)
          {
             //bounds.Encapsulate(transform.localScale + col.transform.localScale);
             //rb.mass += col.rigidbody.mass;
@@ -240,7 +240,7 @@ public class ballBehavior : MonoBehaviour
             curGameObject = col.gameObject;
          }
 
-         if (massBall > 60 && col.rigidbody.mass < 12 && col.rigidbody.mass < rb.mass)
+         if (massBall > 60f && col.rigidbody.mass < 12 && col.rigidbody.mass < rb.mass)
          {
             //bounds.Encapsulate(transform.localScale + col.transform.localScale);
             //rb.mass += col.rigidbody.mass;
@@ -251,7 +251,7 @@ public class ballBehavior : MonoBehaviour
             curGameObject = col.gameObject;
          }
 
-         if (massBall > 100 && col.rigidbody.mass < 20 && col.rigidbody.mass < rb.mass)
+         if (massBall > 100f && col.rigidbody.mass < 20 && col.rigidbody.mass < rb.mass)
          {
             //bounds.Encapsulate(transform.localScale + col.transform.localScale);
             //rb.mass += col.rigidbody.mass;
@@ -262,7 +262,7 @@ public class ballBehavior : MonoBehaviour
             curGameObject = col.gameObject;
          }
          
-         if (massBall > 150 && col.rigidbody.mass < 40 && col.rigidbody.mass < rb.mass)
+         if (massBall > 150f && col.rigidbody.mass < 35 )
          {
             //bounds.Encapsulate(transform.localScale + col.transform.localScale);
             //rb.mass += col.rigidbody.mass;
@@ -274,7 +274,7 @@ public class ballBehavior : MonoBehaviour
          }
 
          
-         if (massBall > 220 && col.rigidbody.mass < 60 && col.rigidbody.mass < rb.mass)
+         if (massBall > 220f && col.rigidbody.mass < 50)
          {
             //bounds.Encapsulate(transform.localScale + col.transform.localScale);
             //rb.mass += col.rigidbody.mass;
@@ -285,7 +285,7 @@ public class ballBehavior : MonoBehaviour
             curGameObject = col.gameObject;
          }
          
-         if (massBall > 270 && col.rigidbody.mass < 100 && col.rigidbody.mass < rb.mass)
+         if (massBall > 270f && col.rigidbody.mass < 70 )
          {
             //bounds.Encapsulate(transform.localScale + col.transform.localScale);
             //rb.mass += col.rigidbody.mass;
@@ -296,7 +296,7 @@ public class ballBehavior : MonoBehaviour
             curGameObject = col.gameObject;
          }
          
-         if (massBall > 270 && col.rigidbody.mass < 150 && col.rigidbody.mass < rb.mass)
+         if (massBall > 270f && col.rigidbody.mass < 120 )
          {
             massBall += col.rigidbody.mass;
             Destroy(col.rigidbody);
@@ -305,7 +305,7 @@ public class ballBehavior : MonoBehaviour
             curGameObject = col.gameObject;
          }
          
-         if (massBall > 330 && col.rigidbody.mass < 200 && col.rigidbody.mass < rb.mass)
+         if (massBall > 330f && col.rigidbody.mass < 180)
          {
             massBall += col.rigidbody.mass;
             Destroy(col.rigidbody);
